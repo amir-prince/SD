@@ -1,0 +1,79 @@
+<div id="loader-sd"></div><!--Content dynamically loaded-->
+<div id="ajaxResponse" class="error-msg" style="display:none;"></div><!--Content dynamically loaded-->
+
+<!--Css part for loader-->
+#loader-sd{
+    display : none;
+    position: fixed;
+    z-index: 100;
+    background-image : url('../images/custom/loader-sd.svg');
+    background-color: rgba(191, 191, 191, 0.3);
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+
+
+<?php /*@mir Ajax request*/?>
+<script type="text/javascript">
+    //<![CDATA[
+    function addToCart() {
+        var activity = jQuery("#activities option:selected").attr('id');
+        var activityname = jQuery("#activities option:selected").val();
+        var option_id = jQuery(".duration.selected").attr("data-option");
+        var option_value = jQuery(".duration.selected").attr("data-value");
+        var date = jQuery(".datepicker-output").attr("value");
+        var person = jQuery("#personnes option:selected").val();
+        var duration = jQuery(".duration.selected").html();
+        var hour = jQuery("#valide-creneaux option:selected").val();
+
+        var ajaxRequest;
+        jQuery("#ajaxResponse").html(''); /* Clear result div*/
+        var values = {
+            'activity': activity,
+            'activityname': activityname,
+            'option_id': option_id,
+            'option_value': option_value,
+            'date': date,
+            'person': person,
+            'duration': duration,
+            'hour': hour
+        };
+
+        ajaxRequest = jQuery.ajax({
+            url: "<?php echo $this->getUrl('Frontname/controller/action'); ?>",
+            type: "POST",
+            dataType: 'json',
+            beforeSend: function () {
+                jQuery('#loader-sd').show();
+            },
+            data: values
+        });
+
+        ajaxRequest.done(function (response, textStatus, jqXHR) {
+            //jQuery("#ajaxResponse").html(response);
+            //jQuery('#ajaxResponse').show();
+            if(response == '200'){
+                window.location.href = "<?php echo Mage::getBaseUrl().'checkout/cart';?>";
+            }else if(response == '300'){
+                jQuery('#loader-sd').hide();
+                jQuery("#ajaxResponse").html("Une ou plusieurs valeurs non pas étaient correctement sélectionnées , merci de réessayer à nouveau !");
+                jQuery('#ajaxResponse').show();
+            }else if(response == '500') {
+                jQuery("#ajaxResponse").html("Oups, Une erreur s'est produite, veuillez réessayer plus tard !");
+                jQuery('#loader-sd').hide();
+            }
+        });
+
+        ajaxRequest.fail(function () {
+            jQuery("#ajaxResponse").html("Oups, Une erreur s'est produite, veuillez réessayer plus tard !");
+            jQuery('#ajaxResponse').show();
+            jQuery('#loader-sd').hide();
+        });
+    };
+    //]]>
+</script>
