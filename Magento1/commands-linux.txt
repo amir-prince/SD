@@ -1,0 +1,26 @@
+############ Tar.gz Compresser ####################
+
+tar czvf <nom_nouveau_archive>.tar.gz <nom_rep_a_compresser>
+
+############ Tar.gz Décompresser ##################
+
+tar xzvf <nom_archive>.tar.gz
+
+############ Copy from server to local #############
+
+scp -P 2222 username@h:/path/to/file/from/server /path/to/destination/local/machine
+
+############ Copy from local to server #############
+
+scp -P 2222 /path/to/file/local/machine username@a:/path/to/destination
+
+############ Sql Export BDD ######################
+
+mysqldump -uUSERNAME -p DATABASE > backup.sql
+
+############ Sql Import BDD ######################
+
+mysql -uUSERNAME -p DATABASE < backup.sql
+
+
+
