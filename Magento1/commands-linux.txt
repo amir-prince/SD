@@ -18,9 +18,12 @@ scp -P 2222 /path/to/file/local/machine username@a:/path/to/destination
 
 mysqldump -uUSERNAME -p DATABASE > backup.sql
 
+############ Sql Export BDD putty to solve the :  unknown variable 'bind-address=0.0.0.0' ######################
+
+mysqldump --no-defaults -uUSERNAME -p DATABASE > backup.sql
+
 ############ Sql Import BDD ######################
 
 mysql -uUSERNAME -p DATABASE < backup.sql
-
 
 
