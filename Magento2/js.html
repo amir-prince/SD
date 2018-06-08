@@ -1,0 +1,17 @@
+
+########## ADD BLOCK TO CHECKOUT ###########
+
+ADD CMS BLOCK :
+
+1. templates/onepage.phtml
+
+<?php $myCmsBlock = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('my_cms_block')->toHtml() ?>
+<script type="text/javascript">
+    var my_cms_block = <?php echo json_encode($myCmsBlock)?>;
+</script>
+
+2. web/template/onepage.html
+
+<div class="checkout-termes-conditions-exemple" data-bind="html:my_cms_block"></div>
+
+############################################
