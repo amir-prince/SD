@@ -17,6 +17,11 @@ ADD CMS BLOCK :
 ##################### ADD JS in Knockoutjs #######################
 
 <div data-bind="afterRender: function() {alert('yes');}"></div>
-
+or:
+<div data-bind="afterRender: function(){
+                    jQuery('#checkout-step-shipping button.action-show-popup').prop('disabled', false);
+                    jQuery('input[name=postcode]').prop('readonly', true);
+                    jQuery('input[name=postcode]').prop('disabled', true);
+                }">
 #################################################################
 
