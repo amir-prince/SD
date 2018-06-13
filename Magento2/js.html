@@ -1,5 +1,5 @@
 
-########## ADD BLOCK TO CHECKOUT ###########
+############################################### ADD BLOCK TO CHECKOUT #####################################################
 
 ADD CMS BLOCK :
 
@@ -14,7 +14,10 @@ ADD CMS BLOCK :
 
 <div class="checkout-termes-conditions-exemple" data-bind="html:my_cms_block"></div>
 
-##################### ADD JS in Knockoutjs #######################
+###########################################################################################################################
+
+
+################################################## ADD JS in Knockoutjs ###################################################
 
 <div data-bind="afterRender: function() {alert('yes');}"></div>
 or:
@@ -23,5 +26,101 @@ or:
                     jQuery('input[name=postcode]').prop('readonly', true);
                     jQuery('input[name=postcode]').prop('disabled', true);
                 }">
-#################################################################
+###########################################################################################################################
+    
+    
+########################################### ADD JS to THEME via requirejs ##################################################
 
+app/design/{Vendor}/{theme}/requirejs-config.js
+
+var config = {
+    map: {
+        '*': {
+            myscript: 'js/myfile'
+        }
+    }
+};
+
+app/design/{Vendor}/{theme}/web/js/myfile.js
+
+define(['jquery'], function($){
+   "use strict";
+       return function myscript()
+       {
+           alert('hello myscript');
+           //put all your myfile js code here
+       }
+});
+
+app/design/{Vendor}/{theme}/Magento_Theme/templates/{yourfile}.phtml
+
+<script type="text/javascript">
+    require(['jquery', 'myscript'], function($, myscript) {
+        myscript();
+    });
+</script>
+    
+###########################################################################################################################
+    
+########################################### ADD JS to Module via requirejs ################################################
+
+app/code/{Vendor}/{module}/view/frontend/requirejs-config.js
+
+var config = {
+    map: {
+        '*': {
+            myscript: 'js/myfile'
+        }
+    }
+};
+
+app/code/{Vendor}/{module}/view/frontend/web/js/myfile.js
+
+define(['jquery'], function($){
+   "use strict";
+       return function myscript()
+       {
+           alert('hello myscript');
+           //put all your myfile js code here
+       }
+});
+
+app/code/{Vendor}/{module}/view/frontend/templates/{yourfile}.phtml
+
+<script type="text/javascript">
+    require(['jquery', 'myscript'], function($, myscript) {
+        myscript();
+    });
+</script>
+
+###########################################################################################################################
+    
+########################################### ADD JS to ADMIN via requirejs #################################################
+
+app/code/{Vendor}/{module}/view/adminhtml/requirejs-config.js
+
+var config = {
+
+    // Please Magento When you load 'requirejs', load also the file bellow myfile.js
+    deps: [
+        "Vendor_Module/js/myfile"
+    ]
+
+};
+
+app/code/{Vendor}/{module}/view/adminhtml/web/js/myfile.js
+
+define(["jquery"], function($) {
+        "use strict";
+
+        $(document).ready(function() {
+            alert("Coucou");
+        }
+});
+
+###########################################################################################################################
+
+
+
+
+    
