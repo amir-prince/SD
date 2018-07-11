@@ -1,0 +1,28 @@
+<?php
+
+class Vendor_Module_Model_Observer extends Varien_Event_Observer
+{
+    /**
+     * @object Grap the product addtional_options from quote to order
+     * 
+     */
+    public function setAdditionalOptionsOnOrderItem($observer) {
+
+        $orderItem = $observer->getEvent()->getOrderItem();
+        $quoteItem = $observer->getEvent()->getItem();
+
+        // Get serialized options that we set on product earlier
+        $myOptions = $quoteItem->getProduct()->getCustomOption('additional_options')->getValue();
+
+        // Add these options into the order item's options, "product_options" attribute.
+        $options = $orderItem->getProductOptions();
+        $options['additional_options'] = unserialize($myOptions);
+        $orderItem->setProductOptions($options);
+
+        // Add also these options into: "sd_booking_datetime", "sd_nb_pers", "sd_duree".
+        $orderItem->setSdBookingDatetime($options['additional_options']['option1']['value'].' '.$options['additional_options']['option3']['value']);
+        $orderItem->setSdNbPers($options['additional_options']['option2']['value']);
+        $orderItem->setSdDuree($options['options'][0]['value']);
+        return $this;
+    }
+}
