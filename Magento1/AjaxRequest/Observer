@@ -4,7 +4,7 @@ class Vendor_Module_Model_Observer extends Varien_Event_Observer
 {
     /**
      * @object Grap the product addtional_options from quote to order
-     * 
+     * @event : sales_convert_quote_item_to_order_item
      */
     public function setAdditionalOptionsOnOrderItem($observer) {
 
