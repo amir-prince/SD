@@ -27,3 +27,15 @@ mysqldump --no-defaults -uUSERNAME -p DATABASE > backup.sql
 mysql -uUSERNAME -p DATABASE < backup.sql
 
 
+############ create conf apache2 ######################
+
+1. create or copy filename.conf
+2. add listner to Alias and documentRoot
+
+ServerAlias dev.uptoyou.projets-preprod.com
+DocumentRoot /var/www/dev
+
+3. Enable this conf : a2ensite dev
+4. Reload apache service : service apache2 reload
+
+#######################################################
