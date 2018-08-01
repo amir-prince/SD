@@ -29,11 +29,11 @@ mysql -uUSERNAME -p DATABASE < backup.sql
 
 ############ create conf apache2 ######################
 
-1. create or copy filename.conf path : /etc/apache2/sites-enabled$
+1. create or copy filename.conf path : /etc/apache2/sites-available
 2. add listner to Alias and documentRoot
 
-ServerAlias dev.uptoyou.projets-preprod.com
-DocumentRoot /var/www/dev
+ServerAlias alias.domaine.com
+DocumentRoot /var/www/folder
 
 3. Enable this conf : a2ensite dev
 4. Reload apache service : service apache2 reload
