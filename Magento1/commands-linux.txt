@@ -29,7 +29,7 @@ mysql -uUSERNAME -p DATABASE < backup.sql
 
 ############ create conf apache2 ######################
 
-1. create or copy filename.conf
+1. create or copy filename.conf path : /etc/apache2/sites-enabled$
 2. add listner to Alias and documentRoot
 
 ServerAlias dev.uptoyou.projets-preprod.com
