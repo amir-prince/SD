@@ -1,0 +1,3 @@
+*** Validate digit input ***
+
+validate-number validate-length maximum-length-10 minimum-length-10
