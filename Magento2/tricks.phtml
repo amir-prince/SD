@@ -1,4 +1,4 @@
-/*Save customer customer attribute*/
+/* ********** Save customer customer attribute ************ */
 
 <?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); ?>
 <?php $customerCol = $objectManager->get('\Magento\Customer\Model\CustomerFactory'); ?>
@@ -18,4 +18,31 @@
     if ($value != "") {
     $customerResource->saveAttribute($customer, 'client_type');
     }
+?>
+/* ****************** SOAP test ****************** */
+
+<?php 
+ini_set("soap.wsdl_cache_enabled", "0");
+const USER = "BPM";
+const PASSWORD = "BPM123$";
+$credentials = array('login' => USER, 'password' => PASSWORD);
+$options = array("trace" => 1, "exception" => 0, 'encoding' => 'UTF-8');
+$url = "http://dev.dyneff.projets-preprod.com/ws/gaz_index_entry.wsdl";
+$soap = new SoapClient($url, $credentials);
+
+\Zend_Debug::dump($soap);
+\Zend_Debug::dump($soap->__getFunctions());
+\Zend_Debug::dump($soap->__getTypes());
+
+try {
+    $result = $soap->__soapCall("gz6020ar", array("parameters"=>array("args0"=>array("p_COT"=> "3520", "p_REL"=> "12345"))));
+    \Zend_Debug::dump($result);
+
+    print "<pre>\n"; print "Request :\n".htmlspecialchars($soap->__getLastRequest()) ."\n";
+    print "Response:\n".htmlspecialchars($soap->__getLastResponse())."\n"; print "</pre>";
+
+} catch (SoapFault $exception) {
+
+    echo 'Exception Thrown: '.$exception->faultstring.'<br><br>';
+}
 ?>
