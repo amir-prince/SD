@@ -1,0 +1,21 @@
+/*Save customer customer attribute*/
+
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance(); ?>
+<?php $customerCol = $objectManager->get('\Magento\Customer\Model\CustomerFactory'); ?>
+<?php $customerModel = $objectManager->get('\Magento\Customer\Model\Customer'); ?>
+<?php $customerResourceFactory = $objectManager->get('\Magento\Customer\Model\ResourceModel\CustomerFactory'); ?>
+
+
+<?php
+    $value = "fioul";
+    $customer = $customerCol->create();
+    $customerData = $customer->getDataModel();
+    $customerData->setId($i);
+    $customerData->setCustomAttribute('client_type', $value);
+    $customer->updateData($customerData);
+
+    $customerResource = $customerResourceFactory->create();
+    if ($value != "") {
+    $customerResource->saveAttribute($customer, 'client_type');
+    }
+?>
