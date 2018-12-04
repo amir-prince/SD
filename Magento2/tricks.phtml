@@ -27,7 +27,7 @@ const USER = "BPM";
 const PASSWORD = "BPM123$";
 $credentials = array('login' => USER, 'password' => PASSWORD);
 $options = array("trace" => 1, "exception" => 0, 'encoding' => 'UTF-8');
-$url = "http://dev.dyneff.projets-preprod.com/ws/gaz_index_entry.wsdl";
+$url = "http://domaine.com/ws/gaz_index_entry.wsdl";
 $soap = new SoapClient($url, $credentials);
 
 \Zend_Debug::dump($soap);
