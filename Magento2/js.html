@@ -94,6 +94,27 @@ app/code/{Vendor}/{module}/view/frontend/templates/{yourfile}.phtml
 </script>
 
 ###########################################################################################################################
+########################################### ADD JS to Module via requirejs Without function ################################################
+app/code/{Vendor}/{module}/view/frontend/requirejs-config.js
+var config = {
+    map: {
+        '*': {
+            myscript: 'js/myfile'
+        }
+    }
+};
+app/code/{Vendor}/{module}/view/frontend/web/js/myfile.js
+define(['jquery'], function($){
+   "use strict";
+       alert('hello myscript');
+       //put all your myfile js code here
+});
+app/code/{Vendor}/{module}/view/frontend/templates/{yourfile}.phtml
+<script type="text/javascript">
+    require(['jquery', 'myscript'], function($, myscript) {
+    });
+</script>    
+###########################################################################################################################
     
 ########################################### ADD JS to ADMIN via requirejs #################################################
 
