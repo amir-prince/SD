@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker-compose exec php sh -c "xdebug $1"

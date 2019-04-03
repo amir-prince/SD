@@ -1,0 +1,1528 @@
+# Logfile created on 2019-01-22 12:34:04 +0100 by logger.rb/61378
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-22 12:34:04 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [129430c7] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [129430c7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c8ebdfb7] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [8d21d6db] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [8d21d6db] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [848836a3] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-22 12:39:29 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [015dacea] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [015dacea] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [32c494f7] 	ok
+  INFO [32c494f7] Finished in 0.855 seconds with exit status 0 (successful).
+  INFO [a443ca84] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [a443ca84] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1a8b424e] Finished in 0.582 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [d688d447] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [d688d447] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [69bbca7d] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [23be31d2] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [23be31d2] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [b1f70867] 	4155d7d9d76abc26b8ef486eb18b8bdd0bdd427b	HEAD
+  INFO [b1f70867] Finished in 1.650 seconds with exit status 0 (successful).
+  INFO [ff2f1a50] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [ff2f1a50] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [05fe5482] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [07f24f58] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [07f24f58] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [e81e5db2] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [9495dfe0] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [9495dfe0] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [503e54da] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [9eac3e84] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [9eac3e84] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [1ba6565e] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [61e219d6] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [61e219d6] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [1fc9bc50] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [0d3a2420] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [0d3a2420] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [332790a4] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [067fd174] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [067fd174] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [b5d6bb76] 	8a92960b057353a0223f02ac8f629fe443b4188f
+ DEBUG [b5d6bb76] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [66741c06] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [66741c06] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [55d50180] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [0180ae48] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [0180ae48] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [0c72ae5d] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [76bd899e] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [76bd899e] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [84710200] Finished in 0.176 seconds with exit status 0 (successful).
+  INFO [52a25eec] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [52a25eec] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cac3b605] 	Fetching origin
+ DEBUG [cac3b605] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   5f487df..d77610e  integration -> integration
+ DEBUG [cac3b605] 	   fd67353..4155d7d  master     -> master
+ DEBUG [cac3b605] 	   8a92960..bd84ec2  preprod    -> preprod
+ DEBUG [cac3b605] 	 * [new ref]         refs/pull/7/head -> refs/pull/7/head
+ DEBUG [cac3b605] 	 * [new ref]         refs/pull/8/head -> refs/pull/8/head
+  INFO [cac3b605] Finished in 2.193 seconds with exit status 0 (successful).
+ DEBUG [c8d4d59c] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [c8d4d59c] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [7d8ad1a9] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [50d97da5] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934 on 79.137.41.200
+ DEBUG [50d97da5] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934 )
+  INFO [0dcde825] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [633ad9c5] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190122113934 on 79.137.41.200
+ DEBUG [633ad9c5] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190122113934 )
+  INFO [bfb2e1c1] Finished in 1.362 seconds with exit status 0 (successful).
+ DEBUG [37489a46] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [37489a46] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [33d24689] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [e3583966] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [e3583966] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [91af1a88] 	bd84ec24c718ecdf0b7cacca7073ca420e030f61
+ DEBUG [91af1a88] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [888ac89f] Running if test ! -d /var/www/planetbowling/preprod/releases/20190122113934; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190122113934'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [888ac89f] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190122113934; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190122113934'" 1>&2; false; fi
+ DEBUG [6404953b] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [a2e3da83] Running /usr/bin/env echo "bd84ec24c718ecdf0b7cacca7073ca420e030f61" > REVISION on 79.137.41.200
+ DEBUG [a2e3da83] Command: cd /var/www/planetbowling/preprod/releases/20190122113934 && /usr/bin/env echo "bd84ec24c718ecdf0b7cacca7073ca420e030f61" > REVISION
+  INFO [0e4c336b] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [3af56ca5] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934/app/etc /var/www/planetbowling/preprod/releases/20190122113934 on 79.137.41.200
+ DEBUG [3af56ca5] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934/app/etc /var/www/planetbowling/preprod/releases/20190122113934
+  INFO [d7e63fc9] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [5af465f1] Running [ -L /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [5af465f1] Command: [ -L /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml ]
+ DEBUG [6c2ee94b] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [31a27cd9] Running [ -f /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [31a27cd9] Command: [ -f /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml ]
+ DEBUG [806d057d] Finished in 0.152 seconds with exit status 1 (failed).
+  INFO [a4bbadb0] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml on 79.137.41.200
+ DEBUG [a4bbadb0] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190122113934/app/etc/local.xml
+  INFO [08e96ae9] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [ac889558] Running [ -L /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh ] on 79.137.41.200
+ DEBUG [ac889558] Command: [ -L /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh ]
+ DEBUG [19fab083] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [12797c29] Running [ -f /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh ] on 79.137.41.200
+ DEBUG [12797c29] Command: [ -f /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh ]
+ DEBUG [8dafefcd] Finished in 0.148 seconds with exit status 1 (failed).
+  INFO [a454b8af] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh on 79.137.41.200
+ DEBUG [a454b8af] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190122113934/websocket.sh
+  INFO [8621627f] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [7ef2612f] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934 /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [7ef2612f] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190122113934 /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws
+  INFO [46448da8] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [05d38a5e] Running [ -L /var/www/planetbowling/preprod/releases/20190122113934/media ] on 79.137.41.200
+ DEBUG [05d38a5e] Command: [ -L /var/www/planetbowling/preprod/releases/20190122113934/media ]
+ DEBUG [3ad7aa88] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [2e122ee4] Running [ -d /var/www/planetbowling/preprod/releases/20190122113934/media ] on 79.137.41.200
+ DEBUG [2e122ee4] Command: [ -d /var/www/planetbowling/preprod/releases/20190122113934/media ]
+ DEBUG [59ae3a9c] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [2000815b] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190122113934/media on 79.137.41.200
+ DEBUG [2000815b] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190122113934/media
+  INFO [7fcaa829] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [ccdc7efb] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190122113934/media on 79.137.41.200
+ DEBUG [ccdc7efb] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190122113934/media
+  INFO [93eebb71] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [768e7a52] Running [ -L /var/www/planetbowling/preprod/releases/20190122113934/var ] on 79.137.41.200
+ DEBUG [768e7a52] Command: [ -L /var/www/planetbowling/preprod/releases/20190122113934/var ]
+ DEBUG [4120b1dc] Finished in 0.151 seconds with exit status 1 (failed).
+ DEBUG [e2833b2b] Running [ -d /var/www/planetbowling/preprod/releases/20190122113934/var ] on 79.137.41.200
+ DEBUG [e2833b2b] Command: [ -d /var/www/planetbowling/preprod/releases/20190122113934/var ]
+ DEBUG [9a15673d] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [298ad2ce] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190122113934/var on 79.137.41.200
+ DEBUG [298ad2ce] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190122113934/var
+  INFO [fec99b0e] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [1d1461d7] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190122113934/var on 79.137.41.200
+ DEBUG [1d1461d7] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190122113934/var
+  INFO [8713a0df] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [daea58d1] Running [ -L /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [daea58d1] Command: [ -L /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules ]
+ DEBUG [0946c9ba] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [87b8dc17] Running [ -d /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [87b8dc17] Command: [ -d /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules ]
+ DEBUG [c8654cb7] Finished in 0.149 seconds with exit status 1 (failed).
+  INFO [4b600040] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [4b600040] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190122113934/api/websocket/sdasyncws/node_modules
+  INFO [92488a1a] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [3165b32b] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190122113934 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [3165b32b] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190122113934 /var/www/planetbowling/preprod/releases/current
+  INFO [3ba3a98c] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [0fad85bc] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [0fad85bc] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [67f6367c] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [fa4de15b] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [fa4de15b] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [33ca313e] 	20190121084139	20190121084232	20190121084717	20190122113934
+ DEBUG [33ca313e] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [ab3cbd98] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [ab3cbd98] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [6ceab3cc] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [6d6909cc] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [6d6909cc] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [9667f415] 	/var/www/planetbowling/preprod/releases/20190122113934
+ DEBUG [9667f415] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [5653d876] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190121084139 on 79.137.41.200
+ DEBUG [5653d876] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190121084139
+  INFO [ce75c020] Finished in 0.565 seconds with exit status 0 (successful).
+ DEBUG [01440a29] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [01440a29] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [0279887b] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [575d9386] Running /usr/bin/env echo "Branch preprod (at bd84ec24c718ecdf0b7cacca7073ca420e030f61) deployed as release 20190122113934 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [575d9386] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at bd84ec24c718ecdf0b7cacca7073ca420e030f61) deployed as release 20190122113934 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [be1bf693] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [0b103513] Running if test ! -d /var/www/planetbowling/preprod/releases/20190122113934; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190122113934'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [0b103513] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190122113934; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190122113934'" 1>&2; false; fi
+ DEBUG [3e74ba52] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [35062362] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [35062362] Command: cd /var/www/planetbowling/preprod/releases/20190122113934 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [4d38019a] 	20190122113934	20190121084717	20190121084232
+ DEBUG [4d38019a] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [1f485055] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190121084717/REVISION on 79.137.41.200
+ DEBUG [1f485055] Command: cd /var/www/planetbowling/preprod/releases/20190122113934 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190121084717/REVISION
+ DEBUG [4544eb26] 	8a92960b057353a0223f02ac8f629fe443b4188f
+ DEBUG [4544eb26] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [b876610e] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 8a92960b057353a0223f02ac8f629fe443b4188f..bd84ec24c718ecdf0b7cacca7073ca420e030f61 on 79.137.41.200
+ DEBUG [b876610e] Command: cd /var/www/planetbowling/preprod/releases/20190122113934 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 8a92960b057353a0223f02ac8f629fe443b4188f..bd84ec24c718ecdf0b7cacca7073ca420e030f61
+ DEBUG [1ed66c24] 	Remove Subtotal From cart (amir-prince)
+add changelog in slack notification (cedraik)
+Merge pull request #7 from Weblibre-consulting/preprod (cedraik)
+changement url sdpass (Nicolas L)
+Update intégration v2 (amir-prince)
+Merge remote-tracking branch 'origin/integration' into integration (amir-prince)
+Update intégration v2 + (amir-prince)
+Remove Subtotal From cart (amir-prince)
+changement url sdpass (Nicolas L)
+ DEBUG [1ed66c24] 	
+Update intégration v2 (amir-prince)
+Update intégration v2 + (amir-prince)
+Merge branch 'integration' of github.com:Weblibre-consulting/PlanetBowling_Magento into integration (Amir Boudjadi)
+PR : integration into preprod (Prince)
+ DEBUG [1ed66c24] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [66a423e6] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Remove Subtotal From cart (amir-prince)\nadd changelog in slack notification (cedraik)\nMerge pull request #7 from Weblibre-consulting/preprod (cedraik)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nMerge remote-tracking branch 'origin/integration' into integration (amir-prince)\nUpdate intégration v2 + (amir-prince)\nRemove Subtotal From cart (amir-prince)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nUpdate intégration v2 + (amir-prince)\nMerge branch 'integration' of github.com:Weblibre-consulting/PlanetBowling_Magento into integration (Amir Boudjadi)\nPR : integration into preprod (Prince)","color":"good","text":"Changelog : Remove Subtotal From cart (amir-prince)\nadd changelog in slack notification (cedraik)\nMerge pull request #7 from Weblibre-consulting/preprod (cedraik)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nMerge remote-tracking branch 'origin/integration' into integration (amir-prince)\nUpdate intégration v2 + (amir-prince)\nRemove Subtotal From cart (amir-prince)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nUpdate intégration v2 + (amir-prince)\nMerge branch 'integration' of github.com:Weblibre-consulting/PlanetBowling_Magento into integration (Amir Boudjadi)\nPR : integration into preprod (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"bd84ec24c718ecdf0b7cacca7073ca420e030f61","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [66a423e6] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Remove Subtotal From cart (amir-prince)\nadd changelog in slack notification (cedraik)\nMerge pull request #7 from Weblibre-consulting/preprod (cedraik)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nMerge remote-tracking branch 'origin/integration' into integration (amir-prince)\nUpdate intégration v2 + (amir-prince)\nRemove Subtotal From cart (amir-prince)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nUpdate intégration v2 + (amir-prince)\nMerge branch 'integration' of github.com:Weblibre-consulting/PlanetBowling_Magento into integration (Amir Boudjadi)\nPR : integration into preprod (Prince)","color":"good","text":"Changelog : Remove Subtotal From cart (amir-prince)\nadd changelog in slack notification (cedraik)\nMerge pull request #7 from Weblibre-consulting/preprod (cedraik)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nMerge remote-tracking branch 'origin/integration' into integration (amir-prince)\nUpdate intégration v2 + (amir-prince)\nRemove Subtotal From cart (amir-prince)\nchangement url sdpass (Nicolas L)\nUpdate intégration v2 (amir-prince)\nUpdate intégration v2 + (amir-prince)\nMerge branch 'integration' of github.com:Weblibre-consulting/PlanetBowling_Magento into integration (Amir Boudjadi)\nPR : integration into preprod (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"bd84ec24c718ecdf0b7cacca7073ca420e030f61","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [199a6c1a] 	ok
+  INFO [199a6c1a] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-23 20:57:08 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [3a7fe6ba] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [3a7fe6ba] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [068d0d0a] 	ok
+  INFO [068d0d0a] Finished in 0.520 seconds with exit status 0 (successful).
+  INFO [2d30b07e] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [2d30b07e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [97bb473f] Finished in 0.537 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [750c9bef] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [750c9bef] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [50a308d9] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [061d5c2f] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [061d5c2f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [992bb91d] 	18a7551d4fea87773e2aa2c10e86eb0e7f1caeb9	HEAD
+  INFO [992bb91d] Finished in 2.154 seconds with exit status 0 (successful).
+  INFO [b43ac613] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [b43ac613] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [221a6e92] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [e9ddf7c2] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [e9ddf7c2] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [4ba8eb7f] Finished in 0.156 seconds with exit status 0 (successful).
+  INFO [0f6f77b7] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [0f6f77b7] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [1e7e7e39] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [024a986e] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [024a986e] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [ce534e96] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [8de146ca] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [8de146ca] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [d1d1dd61] Finished in 0.146 seconds with exit status 0 (successful).
+ DEBUG [82675293] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [82675293] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [dcf3b539] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [18c36b53] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [18c36b53] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [2479f339] 	9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [2479f339] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [c407fff2] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [c407fff2] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [170f068b] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [e32604d8] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [e32604d8] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [5dfb7801] Finished in 0.146 seconds with exit status 0 (successful).
+  INFO [e2312710] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [e2312710] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [3772877c] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [f493547b] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [f493547b] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c19bd6af] 	Fetching origin
+ DEBUG [c19bd6af] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   a11375c..d1c2ac4  integration -> integration
+ DEBUG [c19bd6af] 	   e97bb85..18a7551  master     -> master
+ DEBUG [c19bd6af] 	 * [new ref]         refs/pull/20/head -> refs/pull/20/head
+  INFO [c19bd6af] Finished in 2.225 seconds with exit status 0 (successful).
+ DEBUG [7f39fb46] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [7f39fb46] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [107f3e6f] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [a80efda4] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713 on 79.137.41.200
+ DEBUG [a80efda4] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713 )
+  INFO [2b584b9b] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [cb0febc5] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190123195713 on 79.137.41.200
+ DEBUG [cb0febc5] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190123195713 )
+  INFO [7cd85ad1] Finished in 1.649 seconds with exit status 0 (successful).
+ DEBUG [9c45eaee] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [9c45eaee] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [14380452] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [f974678b] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [f974678b] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [2479421c] 	9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [2479421c] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [cb814b14] Running if test ! -d /var/www/planetbowling/preprod/releases/20190123195713; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123195713'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [cb814b14] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190123195713; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123195713'" 1>&2; false; fi
+ DEBUG [7f71e418] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [de368256] Running /usr/bin/env echo "9da4b080cfba8dbe11c089296ebe0836be5ad35b" > REVISION on 79.137.41.200
+ DEBUG [de368256] Command: cd /var/www/planetbowling/preprod/releases/20190123195713 && /usr/bin/env echo "9da4b080cfba8dbe11c089296ebe0836be5ad35b" > REVISION
+  INFO [2c478c50] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [b0741e17] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713/app/etc /var/www/planetbowling/preprod/releases/20190123195713 on 79.137.41.200
+ DEBUG [b0741e17] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713/app/etc /var/www/planetbowling/preprod/releases/20190123195713
+  INFO [7a127a60] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [c54ad419] Running [ -L /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [c54ad419] Command: [ -L /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml ]
+ DEBUG [32523452] Finished in 0.148 seconds with exit status 1 (failed).
+ DEBUG [a3bb9faa] Running [ -f /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [a3bb9faa] Command: [ -f /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml ]
+ DEBUG [b2e9348b] Finished in 0.148 seconds with exit status 1 (failed).
+  INFO [aeef0c3b] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml on 79.137.41.200
+ DEBUG [aeef0c3b] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190123195713/app/etc/local.xml
+  INFO [57b72e7b] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [afb4057a] Running [ -L /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh ] on 79.137.41.200
+ DEBUG [afb4057a] Command: [ -L /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh ]
+ DEBUG [efea6652] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [1e4fcfb0] Running [ -f /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh ] on 79.137.41.200
+ DEBUG [1e4fcfb0] Command: [ -f /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh ]
+ DEBUG [8ac92127] Finished in 0.147 seconds with exit status 1 (failed).
+  INFO [808a0f9e] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh on 79.137.41.200
+ DEBUG [808a0f9e] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190123195713/websocket.sh
+  INFO [d577d1e5] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [0f5509a4] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713 /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [0f5509a4] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123195713 /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws
+  INFO [837b48e4] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [64ad3959] Running [ -L /var/www/planetbowling/preprod/releases/20190123195713/media ] on 79.137.41.200
+ DEBUG [64ad3959] Command: [ -L /var/www/planetbowling/preprod/releases/20190123195713/media ]
+ DEBUG [ce9e325a] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [2c73d613] Running [ -d /var/www/planetbowling/preprod/releases/20190123195713/media ] on 79.137.41.200
+ DEBUG [2c73d613] Command: [ -d /var/www/planetbowling/preprod/releases/20190123195713/media ]
+ DEBUG [1d3cbd3e] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [6d493d78] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123195713/media on 79.137.41.200
+ DEBUG [6d493d78] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123195713/media
+  INFO [023ceca9] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [e7bd682e] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190123195713/media on 79.137.41.200
+ DEBUG [e7bd682e] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190123195713/media
+  INFO [514f1fe9] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [c6a8892e] Running [ -L /var/www/planetbowling/preprod/releases/20190123195713/var ] on 79.137.41.200
+ DEBUG [c6a8892e] Command: [ -L /var/www/planetbowling/preprod/releases/20190123195713/var ]
+ DEBUG [f5276538] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [dac79b56] Running [ -d /var/www/planetbowling/preprod/releases/20190123195713/var ] on 79.137.41.200
+ DEBUG [dac79b56] Command: [ -d /var/www/planetbowling/preprod/releases/20190123195713/var ]
+ DEBUG [2f1a2181] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [8850628a] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123195713/var on 79.137.41.200
+ DEBUG [8850628a] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123195713/var
+  INFO [29b70d03] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [77d4a4be] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190123195713/var on 79.137.41.200
+ DEBUG [77d4a4be] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190123195713/var
+  INFO [333e77e2] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [d644ae97] Running [ -L /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [d644ae97] Command: [ -L /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules ]
+ DEBUG [1812a607] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [fabbf004] Running [ -d /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [fabbf004] Command: [ -d /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules ]
+ DEBUG [93704624] Finished in 0.148 seconds with exit status 1 (failed).
+  INFO [7e4fc6c8] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [7e4fc6c8] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190123195713/api/websocket/sdasyncws/node_modules
+  INFO [7288060d] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [ab475652] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190123195713 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [ab475652] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190123195713 /var/www/planetbowling/preprod/releases/current
+  INFO [c7fdeee0] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [fbd170e9] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [fbd170e9] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [34c8352e] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [af421bad] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [af421bad] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [7a3407b2] 	20190123093818	20190123170546	20190123172017	20190123195713
+ DEBUG [7a3407b2] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [e79b1c69] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [e79b1c69] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [f198ffd1] Finished in 0.195 seconds with exit status 0 (successful).
+ DEBUG [056b197b] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [056b197b] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [3ff2f720] 	/var/www/planetbowling/preprod/releases/20190123195713
+ DEBUG [3ff2f720] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [cab89682] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123093818 on 79.137.41.200
+ DEBUG [cab89682] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123093818
+  INFO [8a96e804] Finished in 0.563 seconds with exit status 0 (successful).
+ DEBUG [f458c538] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [f458c538] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [5e83af54] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [1ba0919a] Running /usr/bin/env echo "Branch preprod (at 9da4b080cfba8dbe11c089296ebe0836be5ad35b) deployed as release 20190123195713 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [1ba0919a] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 9da4b080cfba8dbe11c089296ebe0836be5ad35b) deployed as release 20190123195713 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [615bfb25] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [a58d48ee] Running if test ! -d /var/www/planetbowling/preprod/releases/20190123195713; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123195713'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [a58d48ee] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190123195713; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123195713'" 1>&2; false; fi
+ DEBUG [9029b166] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [6745b478] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [6745b478] Command: cd /var/www/planetbowling/preprod/releases/20190123195713 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [719fe513] 	20190123195713	20190123172017	20190123170546
+ DEBUG [719fe513] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [d0d7b66a] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190123172017/REVISION on 79.137.41.200
+ DEBUG [d0d7b66a] Command: cd /var/www/planetbowling/preprod/releases/20190123195713 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190123172017/REVISION
+ DEBUG [03f38019] 	9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [03f38019] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [739b887e] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 9da4b080cfba8dbe11c089296ebe0836be5ad35b..9da4b080cfba8dbe11c089296ebe0836be5ad35b on 79.137.41.200
+ DEBUG [739b887e] Command: cd /var/www/planetbowling/preprod/releases/20190123195713 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 9da4b080cfba8dbe11c089296ebe0836be5ad35b..9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [cb862ebf] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [b7e104d3] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : ","color":"good","text":"Changelog : ","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"9da4b080cfba8dbe11c089296ebe0836be5ad35b","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [b7e104d3] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : ","color":"good","text":"Changelog : ","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"9da4b080cfba8dbe11c089296ebe0836be5ad35b","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [eaf57632] 	ok
+  INFO [eaf57632] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-23 21:11:31 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [7c1e4a00] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [7c1e4a00] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [0e64e497] 	ok
+  INFO [0e64e497] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [a7ccb6ff] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [a7ccb6ff] Command: /usr/bin/env mkdir -p /tmp
+  INFO [fe1323c9] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [eaaaac72] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [eaaaac72] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [9e9f5603] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [ad271c3b] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [ad271c3b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [5a61cf76] 	18a7551d4fea87773e2aa2c10e86eb0e7f1caeb9	HEAD
+  INFO [5a61cf76] Finished in 1.723 seconds with exit status 0 (successful).
+  INFO [ec7a7471] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [ec7a7471] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [935a3242] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [080d7b2a] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [080d7b2a] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [112b80bf] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [9ad7c45e] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [9ad7c45e] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [5be27221] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [c3ce3409] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [c3ce3409] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [3a6718c5] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [8cb5f629] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [8cb5f629] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [99e005bc] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [7d97fa19] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [7d97fa19] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [2b0873ef] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [784792a6] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [784792a6] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [3dfc4d36] 	9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [3dfc4d36] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [813ef163] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [813ef163] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [b5565a70] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [eaf3e3c3] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [eaf3e3c3] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [664dfa3c] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [cb1b6f42] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [cb1b6f42] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [5f314633] Finished in 0.201 seconds with exit status 0 (successful).
+  INFO [7c738275] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [7c738275] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7fe7a0f1] 	Fetching origin
+ DEBUG [7fe7a0f1] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   9da4b08..78f201d  preprod    -> preprod
+ DEBUG [7fe7a0f1] 	 * [new ref]         refs/pull/21/head -> refs/pull/21/head
+  INFO [7fe7a0f1] Finished in 1.758 seconds with exit status 0 (successful).
+ DEBUG [cc1e0368] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [cc1e0368] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [ce590ab3] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [ae9c91f3] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135 on 79.137.41.200
+ DEBUG [ae9c91f3] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135 )
+  INFO [4d39e82f] Finished in 0.160 seconds with exit status 0 (successful).
+  INFO [bc975fc4] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190123201135 on 79.137.41.200
+ DEBUG [bc975fc4] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190123201135 )
+  INFO [6fa12b6b] Finished in 1.705 seconds with exit status 0 (successful).
+ DEBUG [5f9133e3] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [5f9133e3] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [dbc5fd74] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [79bac8f2] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [79bac8f2] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [641e7ec5] 	78f201d38e81bfacbc41f21706da343696b6b46d
+ DEBUG [641e7ec5] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [227197c2] Running if test ! -d /var/www/planetbowling/preprod/releases/20190123201135; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123201135'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [227197c2] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190123201135; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123201135'" 1>&2; false; fi
+ DEBUG [ac0a4a04] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [6c74c3b7] Running /usr/bin/env echo "78f201d38e81bfacbc41f21706da343696b6b46d" > REVISION on 79.137.41.200
+ DEBUG [6c74c3b7] Command: cd /var/www/planetbowling/preprod/releases/20190123201135 && /usr/bin/env echo "78f201d38e81bfacbc41f21706da343696b6b46d" > REVISION
+  INFO [88d7ac47] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [8493f739] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135/app/etc /var/www/planetbowling/preprod/releases/20190123201135 on 79.137.41.200
+ DEBUG [8493f739] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135/app/etc /var/www/planetbowling/preprod/releases/20190123201135
+  INFO [32f8f488] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [831b67da] Running [ -L /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [831b67da] Command: [ -L /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml ]
+ DEBUG [18f253de] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [85865f2c] Running [ -f /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [85865f2c] Command: [ -f /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml ]
+ DEBUG [bb579607] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [1f54cf43] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml on 79.137.41.200
+ DEBUG [1f54cf43] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190123201135/app/etc/local.xml
+  INFO [d1392bd3] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [ec59a364] Running [ -L /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh ] on 79.137.41.200
+ DEBUG [ec59a364] Command: [ -L /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh ]
+ DEBUG [7d23c35f] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [8058489d] Running [ -f /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh ] on 79.137.41.200
+ DEBUG [8058489d] Command: [ -f /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh ]
+ DEBUG [16ff0718] Finished in 0.152 seconds with exit status 1 (failed).
+  INFO [3ff7566b] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh on 79.137.41.200
+ DEBUG [3ff7566b] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190123201135/websocket.sh
+  INFO [2cf6c222] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [1a091cd6] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135 /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [1a091cd6] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190123201135 /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws
+  INFO [b31263a8] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [f49ee767] Running [ -L /var/www/planetbowling/preprod/releases/20190123201135/media ] on 79.137.41.200
+ DEBUG [f49ee767] Command: [ -L /var/www/planetbowling/preprod/releases/20190123201135/media ]
+ DEBUG [08ba08f1] Finished in 0.147 seconds with exit status 1 (failed).
+ DEBUG [9423b837] Running [ -d /var/www/planetbowling/preprod/releases/20190123201135/media ] on 79.137.41.200
+ DEBUG [9423b837] Command: [ -d /var/www/planetbowling/preprod/releases/20190123201135/media ]
+ DEBUG [170a45ae] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [71dc1037] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123201135/media on 79.137.41.200
+ DEBUG [71dc1037] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123201135/media
+  INFO [682cb3f6] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [cd4422c6] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190123201135/media on 79.137.41.200
+ DEBUG [cd4422c6] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190123201135/media
+  INFO [55ab442b] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [3474f86f] Running [ -L /var/www/planetbowling/preprod/releases/20190123201135/var ] on 79.137.41.200
+ DEBUG [3474f86f] Command: [ -L /var/www/planetbowling/preprod/releases/20190123201135/var ]
+ DEBUG [081cd031] Finished in 0.148 seconds with exit status 1 (failed).
+ DEBUG [2f8a7423] Running [ -d /var/www/planetbowling/preprod/releases/20190123201135/var ] on 79.137.41.200
+ DEBUG [2f8a7423] Command: [ -d /var/www/planetbowling/preprod/releases/20190123201135/var ]
+ DEBUG [c3ea27c8] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [0b2a6597] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123201135/var on 79.137.41.200
+ DEBUG [0b2a6597] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123201135/var
+  INFO [6f40cd4b] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [619ec8e5] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190123201135/var on 79.137.41.200
+ DEBUG [619ec8e5] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190123201135/var
+  INFO [74ccbbf4] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [a622f0ac] Running [ -L /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [a622f0ac] Command: [ -L /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules ]
+ DEBUG [ddcb8c6a] Finished in 0.148 seconds with exit status 1 (failed).
+ DEBUG [effbe4ef] Running [ -d /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [effbe4ef] Command: [ -d /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules ]
+ DEBUG [2f74c990] Finished in 0.150 seconds with exit status 1 (failed).
+  INFO [dcdec742] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [dcdec742] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190123201135/api/websocket/sdasyncws/node_modules
+  INFO [faff8b69] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [08fe4daa] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190123201135 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [08fe4daa] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190123201135 /var/www/planetbowling/preprod/releases/current
+  INFO [980087a2] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [ffffb025] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [ffffb025] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [36717e8a] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [0f7c45c3] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [0f7c45c3] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [40fce11b] 	20190123170546	20190123172017	20190123195713	20190123201135
+ DEBUG [40fce11b] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [c9d6d5bd] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [c9d6d5bd] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [f6b0b3e6] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [3390b2b4] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [3390b2b4] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [dce85b88] 	/var/www/planetbowling/preprod/releases/20190123201135
+ DEBUG [dce85b88] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [c52b80be] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123170546 on 79.137.41.200
+ DEBUG [c52b80be] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190123170546
+  INFO [2f1e2551] Finished in 0.569 seconds with exit status 0 (successful).
+ DEBUG [6ab17b1c] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [6ab17b1c] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [aba75b5e] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [0878522c] Running /usr/bin/env echo "Branch preprod (at 78f201d38e81bfacbc41f21706da343696b6b46d) deployed as release 20190123201135 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [0878522c] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 78f201d38e81bfacbc41f21706da343696b6b46d) deployed as release 20190123201135 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [ac8ab9e2] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [c644ad1d] Running if test ! -d /var/www/planetbowling/preprod/releases/20190123201135; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123201135'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [c644ad1d] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190123201135; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190123201135'" 1>&2; false; fi
+ DEBUG [618632b3] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [02bfcf3a] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [02bfcf3a] Command: cd /var/www/planetbowling/preprod/releases/20190123201135 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [c5d72759] 	20190123201135	20190123195713	20190123172017
+ DEBUG [c5d72759] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [974292f6] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190123195713/REVISION on 79.137.41.200
+ DEBUG [974292f6] Command: cd /var/www/planetbowling/preprod/releases/20190123201135 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190123195713/REVISION
+ DEBUG [6058abaa] 	9da4b080cfba8dbe11c089296ebe0836be5ad35b
+ DEBUG [6058abaa] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [72abb68e] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 9da4b080cfba8dbe11c089296ebe0836be5ad35b..78f201d38e81bfacbc41f21706da343696b6b46d on 79.137.41.200
+ DEBUG [72abb68e] Command: cd /var/www/planetbowling/preprod/releases/20190123201135 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 9da4b080cfba8dbe11c089296ebe0836be5ad35b..78f201d38e81bfacbc41f21706da343696b6b46d
+ DEBUG [fa79967d] 	Update intégration v3 (Amir Boudjadi)
+Revert (Amir Boudjadi)
+Merge pull request #21 from Weblibre-consulting/integration (Prince)
+ DEBUG [fa79967d] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [ee9a6798] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Update intégration v3 (Amir Boudjadi)\nRevert (Amir Boudjadi)\nMerge pull request #21 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Update intégration v3 (Amir Boudjadi)\nRevert (Amir Boudjadi)\nMerge pull request #21 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"78f201d38e81bfacbc41f21706da343696b6b46d","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [ee9a6798] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Update intégration v3 (Amir Boudjadi)\nRevert (Amir Boudjadi)\nMerge pull request #21 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Update intégration v3 (Amir Boudjadi)\nRevert (Amir Boudjadi)\nMerge pull request #21 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"78f201d38e81bfacbc41f21706da343696b6b46d","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [ca0b9c56] 	ok
+  INFO [ca0b9c56] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-24 18:29:04 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [155d359c] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [155d359c] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [e2c59b56] 	ok
+  INFO [e2c59b56] Finished in 0.997 seconds with exit status 0 (successful).
+  INFO [c0071fa2] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [c0071fa2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [680920c0] Finished in 0.913 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [f16d965a] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [f16d965a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [3a15687b] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [002ed2a6] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [002ed2a6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [0c2cfc4c] 	bb45ce7d218cb06fb757f9eb74a07b47db0b1000	HEAD
+  INFO [0c2cfc4c] Finished in 3.691 seconds with exit status 0 (successful).
+  INFO [526c735f] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [526c735f] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [b296beeb] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [64c81591] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [64c81591] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [68b3a68e] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [43da3773] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [43da3773] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [72127e09] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [2978e046] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [2978e046] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [5d2fbf66] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [bd099a98] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [bd099a98] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [9978245c] Finished in 0.146 seconds with exit status 0 (successful).
+ DEBUG [b9eb68dd] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [b9eb68dd] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [954b532a] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [8a8312e7] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [8a8312e7] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [3eeacc67] 	40a62b1e0d0afa6eabd435ae9245c96399cc2c1e
+ DEBUG [3eeacc67] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [80d7d601] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [80d7d601] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [a46ac6ba] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [64abfd23] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [64abfd23] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [56ae5a39] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [1ed6d03c] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [1ed6d03c] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [df06a04e] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [3580a41b] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [3580a41b] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8623c443] 	Fetching origin
+ DEBUG [8623c443] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   c2c3bc7..1386537  integration -> integration
+ DEBUG [8623c443] 	   40a62b1..5454f8f  preprod    -> preprod
+ DEBUG [8623c443] 	 * [new ref]         refs/pull/31/head -> refs/pull/31/head
+  INFO [8623c443] Finished in 2.414 seconds with exit status 0 (successful).
+ DEBUG [e613949d] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [e613949d] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [87302dbb] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [a61c9234] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912 on 79.137.41.200
+ DEBUG [a61c9234] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912 )
+  INFO [e23ec28a] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [3f95061a] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190124172912 on 79.137.41.200
+ DEBUG [3f95061a] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190124172912 )
+  INFO [57589783] Finished in 1.708 seconds with exit status 0 (successful).
+ DEBUG [cf702c46] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [cf702c46] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [6483ee8d] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [89fae061] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [89fae061] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [1d7d72e7] 	5454f8f076bf316651c4c76c1a42aafeb92e5850
+ DEBUG [1d7d72e7] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [f9165b16] Running if test ! -d /var/www/planetbowling/preprod/releases/20190124172912; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190124172912'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [f9165b16] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190124172912; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190124172912'" 1>&2; false; fi
+ DEBUG [4d35a382] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [6f6bf98a] Running /usr/bin/env echo "5454f8f076bf316651c4c76c1a42aafeb92e5850" > REVISION on 79.137.41.200
+ DEBUG [6f6bf98a] Command: cd /var/www/planetbowling/preprod/releases/20190124172912 && /usr/bin/env echo "5454f8f076bf316651c4c76c1a42aafeb92e5850" > REVISION
+  INFO [ee3ef5f5] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [8406d4e7] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912/app/etc /var/www/planetbowling/preprod/releases/20190124172912 on 79.137.41.200
+ DEBUG [8406d4e7] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912/app/etc /var/www/planetbowling/preprod/releases/20190124172912
+  INFO [939bcb1b] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [b237a3f7] Running [ -L /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [b237a3f7] Command: [ -L /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml ]
+ DEBUG [a23a789f] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [8ebc34bd] Running [ -f /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [8ebc34bd] Command: [ -f /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml ]
+ DEBUG [0326c55e] Finished in 0.147 seconds with exit status 1 (failed).
+  INFO [95e64943] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml on 79.137.41.200
+ DEBUG [95e64943] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190124172912/app/etc/local.xml
+  INFO [b38cb3de] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [53c6d12c] Running [ -L /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh ] on 79.137.41.200
+ DEBUG [53c6d12c] Command: [ -L /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh ]
+ DEBUG [dc0aa899] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [9984fa7d] Running [ -f /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh ] on 79.137.41.200
+ DEBUG [9984fa7d] Command: [ -f /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh ]
+ DEBUG [c4f5844b] Finished in 0.150 seconds with exit status 1 (failed).
+  INFO [e9cb1d25] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh on 79.137.41.200
+ DEBUG [e9cb1d25] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190124172912/websocket.sh
+  INFO [16f425d5] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [a88f697b] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912 /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [a88f697b] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190124172912 /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws
+  INFO [71414a1b] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [1f50ea6c] Running [ -L /var/www/planetbowling/preprod/releases/20190124172912/media ] on 79.137.41.200
+ DEBUG [1f50ea6c] Command: [ -L /var/www/planetbowling/preprod/releases/20190124172912/media ]
+ DEBUG [86a3a87a] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [019c55a7] Running [ -d /var/www/planetbowling/preprod/releases/20190124172912/media ] on 79.137.41.200
+ DEBUG [019c55a7] Command: [ -d /var/www/planetbowling/preprod/releases/20190124172912/media ]
+ DEBUG [9f036791] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [9dd50a3f] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124172912/media on 79.137.41.200
+ DEBUG [9dd50a3f] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124172912/media
+  INFO [b1c22a0c] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [56ec91c4] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190124172912/media on 79.137.41.200
+ DEBUG [56ec91c4] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190124172912/media
+  INFO [ad04819e] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [df362d9f] Running [ -L /var/www/planetbowling/preprod/releases/20190124172912/var ] on 79.137.41.200
+ DEBUG [df362d9f] Command: [ -L /var/www/planetbowling/preprod/releases/20190124172912/var ]
+ DEBUG [52689f70] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [37c820cf] Running [ -d /var/www/planetbowling/preprod/releases/20190124172912/var ] on 79.137.41.200
+ DEBUG [37c820cf] Command: [ -d /var/www/planetbowling/preprod/releases/20190124172912/var ]
+ DEBUG [90a09adf] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [ab56004b] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124172912/var on 79.137.41.200
+ DEBUG [ab56004b] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124172912/var
+  INFO [e0e61314] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [30135066] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190124172912/var on 79.137.41.200
+ DEBUG [30135066] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190124172912/var
+  INFO [8d87a50d] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [76a1d40f] Running [ -L /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [76a1d40f] Command: [ -L /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules ]
+ DEBUG [5367ef24] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [a1d0182a] Running [ -d /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [a1d0182a] Command: [ -d /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules ]
+ DEBUG [7d43a3c6] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [4bcc6439] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [4bcc6439] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190124172912/api/websocket/sdasyncws/node_modules
+  INFO [81ff6b2b] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [034d2961] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190124172912 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [034d2961] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190124172912 /var/www/planetbowling/preprod/releases/current
+  INFO [e90a4d79] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [c8066282] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [c8066282] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [06a71f4f] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [213f1b78] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [213f1b78] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [3a5f203d] 	20190124153324	20190124165336	20190124165909	20190124172912
+ DEBUG [3a5f203d] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [5f19bdf9] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [5f19bdf9] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [945e3dc0] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [646aff7d] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [646aff7d] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [46f47f14] 	/var/www/planetbowling/preprod/releases/20190124172912
+ DEBUG [46f47f14] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [0eea4cba] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124153324 on 79.137.41.200
+ DEBUG [0eea4cba] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124153324
+  INFO [dd7e2f2b] Finished in 0.632 seconds with exit status 0 (successful).
+ DEBUG [1da2daf9] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [1da2daf9] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [20cdddab] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [8e93898d] Running /usr/bin/env echo "Branch preprod (at 5454f8f076bf316651c4c76c1a42aafeb92e5850) deployed as release 20190124172912 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [8e93898d] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 5454f8f076bf316651c4c76c1a42aafeb92e5850) deployed as release 20190124172912 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [9cea43af] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [c960221c] Running if test ! -d /var/www/planetbowling/preprod/releases/20190124172912; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190124172912'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [c960221c] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190124172912; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190124172912'" 1>&2; false; fi
+ DEBUG [16447c4c] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [f955b0f8] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [f955b0f8] Command: cd /var/www/planetbowling/preprod/releases/20190124172912 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [e2e6febf] 	20190124172912	20190124165909	20190124165336
+ DEBUG [e2e6febf] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [b52ee5e1] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190124165909/REVISION on 79.137.41.200
+ DEBUG [b52ee5e1] Command: cd /var/www/planetbowling/preprod/releases/20190124172912 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190124165909/REVISION
+ DEBUG [22731fdc] 	40a62b1e0d0afa6eabd435ae9245c96399cc2c1e
+ DEBUG [22731fdc] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [fc300603] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 40a62b1e0d0afa6eabd435ae9245c96399cc2c1e..5454f8f076bf316651c4c76c1a42aafeb92e5850 on 79.137.41.200
+ DEBUG [fc300603] Command: cd /var/www/planetbowling/preprod/releases/20190124172912 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 40a62b1e0d0afa6eabd435ae9245c96399cc2c1e..5454f8f076bf316651c4c76c1a42aafeb92e5850
+ DEBUG [6e4f8bf3] 	Update the "Recharger_compte", "sd-top-banner" images (Amir Boudjadi)
+Déplacement message d'erreur connexion (Nicolas L)
+Email template Design (Amir Boudjadi)
+Merge pull request #31 from Weblibre-consulting/integration (Prince)
+ DEBUG [6e4f8bf3] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [e2f13eb7] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Update the \"Recharger_compte\", \"sd-top-banner\" images (Amir Boudjadi)\nDéplacement message d'erreur connexion (Nicolas L)\nEmail template Design (Amir Boudjadi)\nMerge pull request #31 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Update the \"Recharger_compte\", \"sd-top-banner\" images (Amir Boudjadi)\nDéplacement message d'erreur connexion (Nicolas L)\nEmail template Design (Amir Boudjadi)\nMerge pull request #31 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"5454f8f076bf316651c4c76c1a42aafeb92e5850","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [e2f13eb7] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Update the \"Recharger_compte\", \"sd-top-banner\" images (Amir Boudjadi)\nDéplacement message d'erreur connexion (Nicolas L)\nEmail template Design (Amir Boudjadi)\nMerge pull request #31 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Update the \"Recharger_compte\", \"sd-top-banner\" images (Amir Boudjadi)\nDéplacement message d'erreur connexion (Nicolas L)\nEmail template Design (Amir Boudjadi)\nMerge pull request #31 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"5454f8f076bf316651c4c76c1a42aafeb92e5850","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [8c82035a] 	sh: 1: Syntax error: "(" unexpected
+  INFO Notifying Slack of deploy failed
+  INFO [612b8b84] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: failed.","color":"danger","text":"bowlingstar deploy by amir: failed.","fields":[{"title":"Status","value":"failed","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"5454f8f076bf316651c4c76c1a42aafeb92e5850","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [612b8b84] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: failed.","color":"danger","text":"bowlingstar deploy by amir: failed.","fields":[{"title":"Status","value":"failed","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"5454f8f076bf316651c4c76c1a42aafeb92e5850","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [4746a03b] 	ok
+  INFO [4746a03b] Finished in 0.950 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-01-29 18:11:08 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [8e02faf8] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [8e02faf8] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [a56885e5] 	ok
+  INFO [a56885e5] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [ab7f993e] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [ab7f993e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ca51ff60] Finished in 0.702 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [6922c2b7] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [6922c2b7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [d2f56e90] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [4262700b] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [4262700b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [e7b3e1c7] 	ed57b407da7d0c165706d3b53275424054be17ca	HEAD
+  INFO [e7b3e1c7] Finished in 1.600 seconds with exit status 0 (successful).
+  INFO [d28d1a5e] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [d28d1a5e] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [451a46a0] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [4f5f82d6] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [4f5f82d6] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [b0bc0714] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [fc01f955] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [fc01f955] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [8d776162] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [d20616ec] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [d20616ec] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [a90e9a93] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [e5399514] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [e5399514] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [21a7f415] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [745da9d3] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [745da9d3] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [c7c713af] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [4ffdd423] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [4ffdd423] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [6baad83c] 	7c6ccb6b99e0916e949c294fa33f784d783a3ebd
+ DEBUG [6baad83c] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [80af3e0a] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [80af3e0a] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [fe3b78c2] Finished in 0.146 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [ed703c57] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [ed703c57] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [a2d1968a] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [af78afac] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [af78afac] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [36b7fc9b] Finished in 0.186 seconds with exit status 0 (successful).
+  INFO [dc20f5b1] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [dc20f5b1] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c1489e4a] 	Fetching origin
+ DEBUG [c1489e4a] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   a432f87..25bae50  integration -> integration
+ DEBUG [c1489e4a] 	   7c6ccb6..06c74ca  preprod    -> preprod
+ DEBUG [c1489e4a] 	 * [new ref]         refs/pull/37/head -> refs/pull/37/head
+  INFO [c1489e4a] Finished in 1.877 seconds with exit status 0 (successful).
+ DEBUG [1262b781] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [1262b781] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [2a8742ed] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [580ccec1] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113 on 79.137.41.200
+ DEBUG [580ccec1] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113 )
+  INFO [3c5a9403] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [81df08fc] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190129171113 on 79.137.41.200
+ DEBUG [81df08fc] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190129171113 )
+  INFO [d49198ce] Finished in 1.410 seconds with exit status 0 (successful).
+ DEBUG [35506fc9] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [35506fc9] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [c6c572c6] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [f0e863a1] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [f0e863a1] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [44e452c7] 	06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb
+ DEBUG [44e452c7] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [eeb45b81] Running if test ! -d /var/www/planetbowling/preprod/releases/20190129171113; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190129171113'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [eeb45b81] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190129171113; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190129171113'" 1>&2; false; fi
+ DEBUG [bd117fcf] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [450d6462] Running /usr/bin/env echo "06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb" > REVISION on 79.137.41.200
+ DEBUG [450d6462] Command: cd /var/www/planetbowling/preprod/releases/20190129171113 && /usr/bin/env echo "06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb" > REVISION
+  INFO [ad686bfd] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [3b4262c2] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113/app/etc /var/www/planetbowling/preprod/releases/20190129171113 on 79.137.41.200
+ DEBUG [3b4262c2] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113/app/etc /var/www/planetbowling/preprod/releases/20190129171113
+  INFO [2b8016a5] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [fe462b03] Running [ -L /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [fe462b03] Command: [ -L /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml ]
+ DEBUG [4a9f721f] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [c647fd30] Running [ -f /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [c647fd30] Command: [ -f /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml ]
+ DEBUG [d5106494] Finished in 0.148 seconds with exit status 1 (failed).
+  INFO [0ec67791] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml on 79.137.41.200
+ DEBUG [0ec67791] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190129171113/app/etc/local.xml
+  INFO [bb0ab9cf] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [fff45634] Running [ -L /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh ] on 79.137.41.200
+ DEBUG [fff45634] Command: [ -L /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh ]
+ DEBUG [870c79e5] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [99624584] Running [ -f /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh ] on 79.137.41.200
+ DEBUG [99624584] Command: [ -f /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh ]
+ DEBUG [a4999d37] Finished in 0.153 seconds with exit status 1 (failed).
+  INFO [95a6aada] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh on 79.137.41.200
+ DEBUG [95a6aada] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190129171113/websocket.sh
+  INFO [1570e60e] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [a358bffc] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113 /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [a358bffc] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190129171113 /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws
+  INFO [27ec09da] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [a05616b7] Running [ -L /var/www/planetbowling/preprod/releases/20190129171113/media ] on 79.137.41.200
+ DEBUG [a05616b7] Command: [ -L /var/www/planetbowling/preprod/releases/20190129171113/media ]
+ DEBUG [7f274302] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [b2b92ea6] Running [ -d /var/www/planetbowling/preprod/releases/20190129171113/media ] on 79.137.41.200
+ DEBUG [b2b92ea6] Command: [ -d /var/www/planetbowling/preprod/releases/20190129171113/media ]
+ DEBUG [36257bc1] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [65ab4f65] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190129171113/media on 79.137.41.200
+ DEBUG [65ab4f65] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190129171113/media
+  INFO [f7cd0074] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [2a1a6c41] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190129171113/media on 79.137.41.200
+ DEBUG [2a1a6c41] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190129171113/media
+  INFO [33a74f6f] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [236a9b36] Running [ -L /var/www/planetbowling/preprod/releases/20190129171113/var ] on 79.137.41.200
+ DEBUG [236a9b36] Command: [ -L /var/www/planetbowling/preprod/releases/20190129171113/var ]
+ DEBUG [8e874b31] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [7286dcc3] Running [ -d /var/www/planetbowling/preprod/releases/20190129171113/var ] on 79.137.41.200
+ DEBUG [7286dcc3] Command: [ -d /var/www/planetbowling/preprod/releases/20190129171113/var ]
+ DEBUG [51baa45e] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [5cdd4e8e] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190129171113/var on 79.137.41.200
+ DEBUG [5cdd4e8e] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190129171113/var
+  INFO [5dd41ca2] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [91720c3f] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190129171113/var on 79.137.41.200
+ DEBUG [91720c3f] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190129171113/var
+  INFO [5388e847] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [5247a1bc] Running [ -L /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [5247a1bc] Command: [ -L /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules ]
+ DEBUG [acdce00d] Finished in 0.150 seconds with exit status 1 (failed).
+ DEBUG [ef87c1c7] Running [ -d /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [ef87c1c7] Command: [ -d /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules ]
+ DEBUG [8ed0f70a] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [f03f2e08] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [f03f2e08] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190129171113/api/websocket/sdasyncws/node_modules
+  INFO [2ecaa069] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [5aeaa82b] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190129171113 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [5aeaa82b] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190129171113 /var/www/planetbowling/preprod/releases/current
+  INFO [814a002c] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [0894d973] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [0894d973] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [02b530c7] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [ec7e97ec] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [ec7e97ec] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [95997c62] 	20190124174713	20190125083134	20190129120114	20190129171113
+ DEBUG [95997c62] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [7e0f71bc] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [7e0f71bc] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [9be0f884] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [65eff97d] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [65eff97d] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [83c89814] 	/var/www/planetbowling/preprod/releases/20190129171113
+ DEBUG [83c89814] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [f8fb079b] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124174713 on 79.137.41.200
+ DEBUG [f8fb079b] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190124174713
+  INFO [ff1472a7] Finished in 0.559 seconds with exit status 0 (successful).
+ DEBUG [b2c4520d] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [b2c4520d] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [ef414215] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [fe38de73] Running /usr/bin/env echo "Branch preprod (at 06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb) deployed as release 20190129171113 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [fe38de73] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb) deployed as release 20190129171113 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [42e269e3] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [8b8f4cf9] Running if test ! -d /var/www/planetbowling/preprod/releases/20190129171113; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190129171113'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [8b8f4cf9] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190129171113; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190129171113'" 1>&2; false; fi
+ DEBUG [c26c508a] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [3271d5a9] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [3271d5a9] Command: cd /var/www/planetbowling/preprod/releases/20190129171113 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [470dede3] 	20190129171113	20190129120114	20190125083134
+ DEBUG [470dede3] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [60aa9947] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190129120114/REVISION on 79.137.41.200
+ DEBUG [60aa9947] Command: cd /var/www/planetbowling/preprod/releases/20190129171113 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190129120114/REVISION
+ DEBUG [2beab32c] 	7c6ccb6b99e0916e949c294fa33f784d783a3ebd
+ DEBUG [2beab32c] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [6805d382] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 7c6ccb6b99e0916e949c294fa33f784d783a3ebd..06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb on 79.137.41.200
+ DEBUG [6805d382] Command: cd /var/www/planetbowling/preprod/releases/20190129171113 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 7c6ccb6b99e0916e949c294fa33f784d783a3ebd..06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb
+ DEBUG [e9284c9e] 	Responsive V1 (Amir Boudjadi)
+Merge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)
+Merge pull request #37 from Weblibre-consulting/integration (Prince)
+ DEBUG [e9284c9e] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [74215554] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Responsive V1 (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nMerge pull request #37 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Responsive V1 (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nMerge pull request #37 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [74215554] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Responsive V1 (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nMerge pull request #37 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Responsive V1 (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nMerge pull request #37 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"06c74cacb9a75b4b3122cfb56e1fb3dd357d6efb","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [37e98520] 	ok
+  INFO [37e98520] Finished in 0.314 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-11 19:14:15 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [3f3d3bc1] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [3f3d3bc1] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [dba2607c] 	ok
+  INFO [dba2607c] Finished in 0.883 seconds with exit status 0 (successful).
+  INFO [bafb0917] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [bafb0917] Command: /usr/bin/env mkdir -p /tmp
+  INFO [47f2364b] Finished in 0.728 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [3bcad6a4] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [3bcad6a4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [4e5af8b8] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [3a607aca] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [3a607aca] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [fd09d5eb] 	cd3e872faef9fc2c1556942dc0a93741129b2b65	HEAD
+  INFO [fd09d5eb] Finished in 1.692 seconds with exit status 0 (successful).
+  INFO [7d4635c2] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [7d4635c2] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [e12e702f] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [fdfd3e79] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [fdfd3e79] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [88d94eca] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [879feac1] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [879feac1] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [beaa8775] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [61915368] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [61915368] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [054b62d5] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [da719839] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [da719839] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [a19aabc6] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [c60a7033] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [c60a7033] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [1ce51443] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [6d01e5e1] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [6d01e5e1] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [6b91b348] 	410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [6b91b348] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [3ad1cccb] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [3ad1cccb] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [f64af04f] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [aded4289] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [aded4289] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [cb15ba73] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [2bf3ff58] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [2bf3ff58] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [59054379] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [14db2276] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [14db2276] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9866c6c1] 	Fetching origin
+ DEBUG [9866c6c1] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   c1c695b..b079fa9  integration -> integration
+ DEBUG [9866c6c1] 	 * [new ref]         refs/pull/48/head -> refs/pull/48/head
+ DEBUG [9866c6c1] 	 * [new ref]         refs/pull/48/merge -> refs/pull/48/merge
+  INFO [9866c6c1] Finished in 2.019 seconds with exit status 0 (successful).
+ DEBUG [e56d1678] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [e56d1678] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [839ab1f8] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [37841931] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420 on 79.137.41.200
+ DEBUG [37841931] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420 )
+  INFO [d5b1ea2d] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [791e87c5] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190211181420 on 79.137.41.200
+ DEBUG [791e87c5] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190211181420 )
+  INFO [50160ab4] Finished in 1.532 seconds with exit status 0 (successful).
+ DEBUG [2e18c5cf] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [2e18c5cf] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [0ffe388e] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [0c0421cf] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [0c0421cf] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [88f257fd] 	410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [88f257fd] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [094085e2] Running if test ! -d /var/www/planetbowling/preprod/releases/20190211181420; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211181420'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [094085e2] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190211181420; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211181420'" 1>&2; false; fi
+ DEBUG [7dd8e80c] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [87e90d0c] Running /usr/bin/env echo "410a057302db079fbe13c5d4d61d790691f30d73" > REVISION on 79.137.41.200
+ DEBUG [87e90d0c] Command: cd /var/www/planetbowling/preprod/releases/20190211181420 && /usr/bin/env echo "410a057302db079fbe13c5d4d61d790691f30d73" > REVISION
+  INFO [d827afa5] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [d1443ec7] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420/app/etc /var/www/planetbowling/preprod/releases/20190211181420 on 79.137.41.200
+ DEBUG [d1443ec7] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420/app/etc /var/www/planetbowling/preprod/releases/20190211181420
+  INFO [1c598d53] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [dd49521a] Running [ -L /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [dd49521a] Command: [ -L /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml ]
+ DEBUG [2d79cc53] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [3e67d18e] Running [ -f /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [3e67d18e] Command: [ -f /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml ]
+ DEBUG [a880aaa3] Finished in 0.128 seconds with exit status 1 (failed).
+  INFO [2596e9d5] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml on 79.137.41.200
+ DEBUG [2596e9d5] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190211181420/app/etc/local.xml
+  INFO [b9f16506] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [565574d6] Running [ -L /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh ] on 79.137.41.200
+ DEBUG [565574d6] Command: [ -L /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh ]
+ DEBUG [09564256] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [8fa79c76] Running [ -f /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh ] on 79.137.41.200
+ DEBUG [8fa79c76] Command: [ -f /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh ]
+ DEBUG [26debacb] Finished in 0.127 seconds with exit status 1 (failed).
+  INFO [27f5e7c8] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh on 79.137.41.200
+ DEBUG [27f5e7c8] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190211181420/websocket.sh
+  INFO [1e126c1f] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [07027434] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420 /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [07027434] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211181420 /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws
+  INFO [269e06cb] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [651d2252] Running [ -L /var/www/planetbowling/preprod/releases/20190211181420/media ] on 79.137.41.200
+ DEBUG [651d2252] Command: [ -L /var/www/planetbowling/preprod/releases/20190211181420/media ]
+ DEBUG [29f49e6a] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [de657375] Running [ -d /var/www/planetbowling/preprod/releases/20190211181420/media ] on 79.137.41.200
+ DEBUG [de657375] Command: [ -d /var/www/planetbowling/preprod/releases/20190211181420/media ]
+ DEBUG [62f67af3] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [a30e7f11] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211181420/media on 79.137.41.200
+ DEBUG [a30e7f11] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211181420/media
+  INFO [4a2154f0] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [4ac5634a] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190211181420/media on 79.137.41.200
+ DEBUG [4ac5634a] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190211181420/media
+  INFO [9a3292bf] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [b08a3afc] Running [ -L /var/www/planetbowling/preprod/releases/20190211181420/var ] on 79.137.41.200
+ DEBUG [b08a3afc] Command: [ -L /var/www/planetbowling/preprod/releases/20190211181420/var ]
+ DEBUG [c0f2a158] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [2ac3a02a] Running [ -d /var/www/planetbowling/preprod/releases/20190211181420/var ] on 79.137.41.200
+ DEBUG [2ac3a02a] Command: [ -d /var/www/planetbowling/preprod/releases/20190211181420/var ]
+ DEBUG [47696156] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [abccb737] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211181420/var on 79.137.41.200
+ DEBUG [abccb737] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211181420/var
+  INFO [6c987f85] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [a42347f5] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190211181420/var on 79.137.41.200
+ DEBUG [a42347f5] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190211181420/var
+  INFO [04216f72] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [455b6c82] Running [ -L /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [455b6c82] Command: [ -L /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules ]
+ DEBUG [e82ad583] Finished in 0.127 seconds with exit status 1 (failed).
+ DEBUG [80b2bef9] Running [ -d /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [80b2bef9] Command: [ -d /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules ]
+ DEBUG [910ab5d6] Finished in 0.128 seconds with exit status 1 (failed).
+  INFO [fe268b14] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [fe268b14] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190211181420/api/websocket/sdasyncws/node_modules
+  INFO [354524e4] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [af658420] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190211181420 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [af658420] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190211181420 /var/www/planetbowling/preprod/releases/current
+  INFO [bc27de7d] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [984b2f08] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [984b2f08] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [74384b62] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [a4d1c872] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [a4d1c872] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [5fd8a4e3] 	20190206153718	20190207113606	20190211123709	20190211181420
+ DEBUG [5fd8a4e3] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [3c33a983] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [3c33a983] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [8b7eefd2] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [8475b5aa] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [8475b5aa] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [374857ff] 	/var/www/planetbowling/preprod/releases/20190211181420
+ DEBUG [374857ff] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [b2f08335] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190206153718 on 79.137.41.200
+ DEBUG [b2f08335] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190206153718
+  INFO [bb77db20] Finished in 0.549 seconds with exit status 0 (successful).
+ DEBUG [dcc5c790] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [dcc5c790] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [ef720951] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [8e9902c7] Running /usr/bin/env echo "Branch preprod (at 410a057302db079fbe13c5d4d61d790691f30d73) deployed as release 20190211181420 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [8e9902c7] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 410a057302db079fbe13c5d4d61d790691f30d73) deployed as release 20190211181420 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [fe671113] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [9cc842da] Running if test ! -d /var/www/planetbowling/preprod/releases/20190211181420; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211181420'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [9cc842da] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190211181420; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211181420'" 1>&2; false; fi
+ DEBUG [2cea9851] Finished in 0.373 seconds with exit status 0 (successful).
+ DEBUG [31f34af5] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [31f34af5] Command: cd /var/www/planetbowling/preprod/releases/20190211181420 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [1ebe36a8] 	20190211181420	20190211123709	20190207113606
+ DEBUG [1ebe36a8] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [c6c6fe76] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190211123709/REVISION on 79.137.41.200
+ DEBUG [c6c6fe76] Command: cd /var/www/planetbowling/preprod/releases/20190211181420 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190211123709/REVISION
+ DEBUG [45ef35ab] 	410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [45ef35ab] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [e35ea546] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 410a057302db079fbe13c5d4d61d790691f30d73..410a057302db079fbe13c5d4d61d790691f30d73 on 79.137.41.200
+ DEBUG [e35ea546] Command: cd /var/www/planetbowling/preprod/releases/20190211181420 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 410a057302db079fbe13c5d4d61d790691f30d73..410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [b86dfa8c] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [e4f86889] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : ","color":"good","text":"Changelog : ","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"410a057302db079fbe13c5d4d61d790691f30d73","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [e4f86889] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : ","color":"good","text":"Changelog : ","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"410a057302db079fbe13c5d4d61d790691f30d73","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [231ec418] 	ok
+  INFO [231ec418] Finished in 0.241 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-02-11 19:35:07 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [bf7403d6] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [bf7403d6] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [2bc413bd] 	ok
+  INFO [2bc413bd] Finished in 0.899 seconds with exit status 0 (successful).
+  INFO [1d378c8d] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [1d378c8d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4c2911a2] Finished in 0.554 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [39864d56] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [39864d56] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [a1bf2b6f] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [e92b315e] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [e92b315e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [09b1c25b] 	cd3e872faef9fc2c1556942dc0a93741129b2b65	HEAD
+  INFO [09b1c25b] Finished in 1.694 seconds with exit status 0 (successful).
+  INFO [a2a0c233] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [a2a0c233] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [fbc6aa4d] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [91c6e4ed] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [91c6e4ed] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [b83fcef9] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [9548752e] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [9548752e] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [349e069f] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [475584d1] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [475584d1] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [870a55a0] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [008018f7] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [008018f7] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [6ea5f556] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [abf8393f] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [abf8393f] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [7fc0ba7c] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [057b1fbd] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [057b1fbd] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [a5c681f3] 	410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [a5c681f3] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [794fa4c6] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [794fa4c6] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [1d5b0619] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [ac297101] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [ac297101] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [23a34ee2] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [08595817] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [08595817] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [e97f4e51] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [26236da3] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [26236da3] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c70c3272] 	Fetching origin
+ DEBUG [c70c3272] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+ x [deleted]         (none)     -> refs/pull/48/merge
+ DEBUG [c70c3272] 	   410a057..c3d23aa  preprod    -> preprod
+  INFO [c70c3272] Finished in 1.984 seconds with exit status 0 (successful).
+ DEBUG [1c0ffdda] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [1c0ffdda] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [5959f48c] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [1f6ee953] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511 on 79.137.41.200
+ DEBUG [1f6ee953] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511 )
+  INFO [03022260] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [59afc6c3] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190211183511 on 79.137.41.200
+ DEBUG [59afc6c3] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190211183511 )
+  INFO [7aba1b6e] Finished in 1.741 seconds with exit status 0 (successful).
+ DEBUG [8f11b553] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [8f11b553] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [eed4ce3f] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [b13ffdad] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [b13ffdad] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [2b7fc6b7] 	c3d23aa7bed61eed7a4a31ceacc09c447bf45028
+ DEBUG [2b7fc6b7] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [b5d24660] Running if test ! -d /var/www/planetbowling/preprod/releases/20190211183511; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211183511'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [b5d24660] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190211183511; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211183511'" 1>&2; false; fi
+ DEBUG [5a7ae8c2] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO [344fa7ac] Running /usr/bin/env echo "c3d23aa7bed61eed7a4a31ceacc09c447bf45028" > REVISION on 79.137.41.200
+ DEBUG [344fa7ac] Command: cd /var/www/planetbowling/preprod/releases/20190211183511 && /usr/bin/env echo "c3d23aa7bed61eed7a4a31ceacc09c447bf45028" > REVISION
+  INFO [b2e38bdf] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [cdbb5584] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511/app/etc /var/www/planetbowling/preprod/releases/20190211183511 on 79.137.41.200
+ DEBUG [cdbb5584] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511/app/etc /var/www/planetbowling/preprod/releases/20190211183511
+  INFO [17bb3304] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [1d8f7df4] Running [ -L /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [1d8f7df4] Command: [ -L /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml ]
+ DEBUG [72e12120] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [e152ff80] Running [ -f /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [e152ff80] Command: [ -f /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml ]
+ DEBUG [601d8b5c] Finished in 0.131 seconds with exit status 1 (failed).
+  INFO [d1928fce] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml on 79.137.41.200
+ DEBUG [d1928fce] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190211183511/app/etc/local.xml
+  INFO [e67641a2] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [3cea870b] Running [ -L /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh ] on 79.137.41.200
+ DEBUG [3cea870b] Command: [ -L /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh ]
+ DEBUG [12cab2f2] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [4a3c07fb] Running [ -f /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh ] on 79.137.41.200
+ DEBUG [4a3c07fb] Command: [ -f /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh ]
+ DEBUG [ba078202] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [442447f7] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh on 79.137.41.200
+ DEBUG [442447f7] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190211183511/websocket.sh
+  INFO [6632aee8] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [7e140b3f] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511 /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [7e140b3f] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190211183511 /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws
+  INFO [074d28c0] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [8dafce85] Running [ -L /var/www/planetbowling/preprod/releases/20190211183511/media ] on 79.137.41.200
+ DEBUG [8dafce85] Command: [ -L /var/www/planetbowling/preprod/releases/20190211183511/media ]
+ DEBUG [1126d47d] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [20681eee] Running [ -d /var/www/planetbowling/preprod/releases/20190211183511/media ] on 79.137.41.200
+ DEBUG [20681eee] Command: [ -d /var/www/planetbowling/preprod/releases/20190211183511/media ]
+ DEBUG [07fa9814] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [4df68195] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211183511/media on 79.137.41.200
+ DEBUG [4df68195] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211183511/media
+  INFO [19f6a988] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [b787637d] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190211183511/media on 79.137.41.200
+ DEBUG [b787637d] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190211183511/media
+  INFO [3bb458f5] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [6add320e] Running [ -L /var/www/planetbowling/preprod/releases/20190211183511/var ] on 79.137.41.200
+ DEBUG [6add320e] Command: [ -L /var/www/planetbowling/preprod/releases/20190211183511/var ]
+ DEBUG [7de777d9] Finished in 0.130 seconds with exit status 1 (failed).
+ DEBUG [23600c29] Running [ -d /var/www/planetbowling/preprod/releases/20190211183511/var ] on 79.137.41.200
+ DEBUG [23600c29] Command: [ -d /var/www/planetbowling/preprod/releases/20190211183511/var ]
+ DEBUG [1673c057] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [41482161] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211183511/var on 79.137.41.200
+ DEBUG [41482161] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190211183511/var
+  INFO [62865237] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [2f5b37da] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190211183511/var on 79.137.41.200
+ DEBUG [2f5b37da] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190211183511/var
+  INFO [ad8e27d8] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [4eeed9c7] Running [ -L /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [4eeed9c7] Command: [ -L /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules ]
+ DEBUG [07967318] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [b36737bd] Running [ -d /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [b36737bd] Command: [ -d /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules ]
+ DEBUG [912b8686] Finished in 0.132 seconds with exit status 1 (failed).
+  INFO [daeabce7] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [daeabce7] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190211183511/api/websocket/sdasyncws/node_modules
+  INFO [fed33fbf] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [bace489f] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190211183511 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [bace489f] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190211183511 /var/www/planetbowling/preprod/releases/current
+  INFO [e91cb80a] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [f555fbc5] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [f555fbc5] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [0d3d6330] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [f85f8228] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [f85f8228] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [6ba40de0] 	20190207113606	20190211123709	20190211181420	20190211183511
+ DEBUG [6ba40de0] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [fc187f12] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [fc187f12] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [f5db7f9b] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [f46b34b4] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [f46b34b4] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [948cd2ec] 	/var/www/planetbowling/preprod/releases/20190211183511
+ DEBUG [948cd2ec] Finished in 0.133 seconds with exit status 0 (successful).
+  INFO [2bb6cec9] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190207113606 on 79.137.41.200
+ DEBUG [2bb6cec9] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190207113606
+  INFO [5e49071a] Finished in 0.545 seconds with exit status 0 (successful).
+ DEBUG [f2ed363e] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [f2ed363e] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [3eb15582] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO [d1de6911] Running /usr/bin/env echo "Branch preprod (at c3d23aa7bed61eed7a4a31ceacc09c447bf45028) deployed as release 20190211183511 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [d1de6911] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at c3d23aa7bed61eed7a4a31ceacc09c447bf45028) deployed as release 20190211183511 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [b6d2d988] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [289da5e1] Running if test ! -d /var/www/planetbowling/preprod/releases/20190211183511; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211183511'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [289da5e1] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190211183511; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190211183511'" 1>&2; false; fi
+ DEBUG [36049a36] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [3e641931] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [3e641931] Command: cd /var/www/planetbowling/preprod/releases/20190211183511 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [239eb803] 	20190211183511	20190211181420	20190211123709
+ DEBUG [239eb803] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [3ec49752] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190211181420/REVISION on 79.137.41.200
+ DEBUG [3ec49752] Command: cd /var/www/planetbowling/preprod/releases/20190211183511 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190211181420/REVISION
+ DEBUG [3237b530] 	410a057302db079fbe13c5d4d61d790691f30d73
+ DEBUG [3237b530] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [d2ddbbb9] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 410a057302db079fbe13c5d4d61d790691f30d73..c3d23aa7bed61eed7a4a31ceacc09c447bf45028 on 79.137.41.200
+ DEBUG [d2ddbbb9] Command: cd /var/www/planetbowling/preprod/releases/20190211183511 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 410a057302db079fbe13c5d4d61d790691f30d73..c3d23aa7bed61eed7a4a31ceacc09c447bf45028
+ DEBUG [5a9d9ee1] 	Ticket CE Module (Amir Boudjadi)
+Merge pull request #48 from Weblibre-consulting/integration (Prince)
+ DEBUG [5a9d9ee1] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [68e6dd01] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Ticket CE Module (Amir Boudjadi)\nMerge pull request #48 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Ticket CE Module (Amir Boudjadi)\nMerge pull request #48 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"c3d23aa7bed61eed7a4a31ceacc09c447bf45028","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [68e6dd01] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Ticket CE Module (Amir Boudjadi)\nMerge pull request #48 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Ticket CE Module (Amir Boudjadi)\nMerge pull request #48 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"c3d23aa7bed61eed7a4a31ceacc09c447bf45028","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [db1747ca] 	ok
+  INFO [db1747ca] Finished in 0.246 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-03-19 10:49:46 +0100 cap preprod deploy
+  INFO ---------------------------------------------------------------------------
+  INFO Notifying Slack of deploy starting
+  INFO [e19e131d] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [e19e131d] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"bowlingstar deploy by amir: starting.","color":"warning","text":"bowlingstar deploy by amir: starting.","fields":[{"title":"Status","value":"starting","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":null,"short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [ed4ee648] 	ok
+  INFO [ed4ee648] Finished in 0.766 seconds with exit status 0 (successful).
+  INFO [952f3e20] Running /usr/bin/env mkdir -p /tmp on 79.137.41.200
+ DEBUG [952f3e20] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7b2df56e] Finished in 0.558 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bowlingstar-preprod-amir.sh 100.0%
+  INFO [234c1206] Running /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh on 79.137.41.200
+ DEBUG [234c1206] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bowlingstar-preprod-amir.sh
+  INFO [c85ed32f] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [2275df7a] Running /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD on 79.137.41.200
+ DEBUG [2275df7a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git ls-remote git@github.com:Weblibre-consulting/PlanetBowling_Magento.git HEAD )
+ DEBUG [379eedc2] 	cd3e872faef9fc2c1556942dc0a93741129b2b65	HEAD
+  INFO [379eedc2] Finished in 1.758 seconds with exit status 0 (successful).
+  INFO [0ff63e06] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [0ff63e06] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared /var/www/planetbowling/preprod/releases
+  INFO [accf76c2] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [bf6e7ea6] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [bf6e7ea6] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules
+  INFO [b1191073] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [72086756] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared on 79.137.41.200
+ DEBUG [72086756] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/shared/app/etc /var/www/planetbowling/preprod/shared
+  INFO [ee98d1f8] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [0b21177a] Running [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [0b21177a] Command: [ -f /var/www/planetbowling/preprod/shared/app/etc/local.xml ]
+ DEBUG [c0c1d2b2] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [c3259662] Running [ -f /var/www/planetbowling/preprod/shared/websocket.sh ] on 79.137.41.200
+ DEBUG [c3259662] Command: [ -f /var/www/planetbowling/preprod/shared/websocket.sh ]
+ DEBUG [8c6c4026] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [7a2a00d5] Running [ -f /var/www/planetbowling/preprod/current/REVISION ] on 79.137.41.200
+ DEBUG [7a2a00d5] Command: [ -f /var/www/planetbowling/preprod/current/REVISION ]
+ DEBUG [d82db1d7] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [3038f2cb] Running /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null on 79.137.41.200
+ DEBUG [3038f2cb] Command: /usr/bin/env cat /var/www/planetbowling/preprod/current/REVISION 2>/dev/null
+ DEBUG [1d501329] 	5ae42deca803484e75cb973d9807b03704b5e8eb
+ DEBUG [1d501329] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [aac474c2] Running [ -f /var/www/planetbowling/preprod/repo/HEAD ] on 79.137.41.200
+ DEBUG [aac474c2] Command: [ -f /var/www/planetbowling/preprod/repo/HEAD ]
+ DEBUG [e777bb73] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/planetbowling/preprod/repo
+ DEBUG [c049ee20] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [c049ee20] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [b7d4b8f6] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [7aeb9555] Running /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git on 79.137.41.200
+ DEBUG [7aeb9555] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote set-url origin git@github.com:Weblibre-consulting/PlanetBowling_Magento.git )
+  INFO [b038f831] Finished in 0.146 seconds with exit status 0 (successful).
+  INFO [f6435f0f] Running /usr/bin/env git remote update --prune on 79.137.41.200
+ DEBUG [f6435f0f] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f987380c] 	Fetching origin
+ DEBUG [f987380c] 	From github.com:Weblibre-consulting/PlanetBowling_Magento
+   6a34a57..4c542a0  integration -> integration
+ DEBUG [f987380c] 	   5ae42de..53a5e19  preprod    -> preprod
+ DEBUG [f987380c] 	 * [new ref]         refs/pull/58/head -> refs/pull/58/head
+  INFO [f987380c] Finished in 1.992 seconds with exit status 0 (successful).
+ DEBUG [6de50dd6] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [6de50dd6] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [2ef92abe] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO [e6dc427e] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951 on 79.137.41.200
+ DEBUG [e6dc427e] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951 )
+  INFO [71434cca] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [39c23f7a] Running /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190319094951 on 79.137.41.200
+ DEBUG [39c23f7a] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git archive preprod magento | /usr/bin/env tar -x --strip-components 1 -f - -C /var/www/planetbowling/preprod/releases/20190319094951 )
+  INFO [50c69db8] Finished in 1.758 seconds with exit status 0 (successful).
+ DEBUG [3adceacd] Running if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [3adceacd] Command: if test ! -d /var/www/planetbowling/preprod/repo; then echo "Directory does not exist '/var/www/planetbowling/preprod/repo'" 1>&2; false; fi
+ DEBUG [6dafba8c] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [827e7fb8] Running /usr/bin/env git rev-list --max-count=1 preprod on 79.137.41.200
+ DEBUG [827e7fb8] Command: cd /var/www/planetbowling/preprod/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bowlingstar-preprod-amir.sh" ; /usr/bin/env git rev-list --max-count=1 preprod )
+ DEBUG [990131ae] 	53a5e19e06d01ad250940424335226f114b1ac8a
+ DEBUG [990131ae] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [af535e7c] Running if test ! -d /var/www/planetbowling/preprod/releases/20190319094951; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190319094951'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [af535e7c] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190319094951; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190319094951'" 1>&2; false; fi
+ DEBUG [d0571dbd] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [68ab3031] Running /usr/bin/env echo "53a5e19e06d01ad250940424335226f114b1ac8a" > REVISION on 79.137.41.200
+ DEBUG [68ab3031] Command: cd /var/www/planetbowling/preprod/releases/20190319094951 && /usr/bin/env echo "53a5e19e06d01ad250940424335226f114b1ac8a" > REVISION
+  INFO [c727bada] Finished in 0.128 seconds with exit status 0 (successful).
+  INFO [9b9ef98c] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951/app/etc /var/www/planetbowling/preprod/releases/20190319094951 on 79.137.41.200
+ DEBUG [9b9ef98c] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951/app/etc /var/www/planetbowling/preprod/releases/20190319094951
+  INFO [c00b6617] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [ac356a66] Running [ -L /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [ac356a66] Command: [ -L /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml ]
+ DEBUG [435a847f] Finished in 0.125 seconds with exit status 1 (failed).
+ DEBUG [66c96314] Running [ -f /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml ] on 79.137.41.200
+ DEBUG [66c96314] Command: [ -f /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml ]
+ DEBUG [9802f451] Finished in 0.123 seconds with exit status 1 (failed).
+  INFO [198abfaf] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml on 79.137.41.200
+ DEBUG [198abfaf] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/app/etc/local.xml /var/www/planetbowling/preprod/releases/20190319094951/app/etc/local.xml
+  INFO [59840b10] Finished in 0.125 seconds with exit status 0 (successful).
+ DEBUG [fede1740] Running [ -L /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh ] on 79.137.41.200
+ DEBUG [fede1740] Command: [ -L /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh ]
+ DEBUG [16658915] Finished in 0.125 seconds with exit status 1 (failed).
+ DEBUG [f2c5b62c] Running [ -f /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh ] on 79.137.41.200
+ DEBUG [f2c5b62c] Command: [ -f /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh ]
+ DEBUG [7ca8ea55] Finished in 0.125 seconds with exit status 1 (failed).
+  INFO [d846b77d] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh on 79.137.41.200
+ DEBUG [d846b77d] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/websocket.sh /var/www/planetbowling/preprod/releases/20190319094951/websocket.sh
+  INFO [1db9053e] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [527be082] Running /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951 /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws on 79.137.41.200
+ DEBUG [527be082] Command: /usr/bin/env mkdir -p /var/www/planetbowling/preprod/releases/20190319094951 /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws
+  INFO [7d5aa812] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [845a64f3] Running [ -L /var/www/planetbowling/preprod/releases/20190319094951/media ] on 79.137.41.200
+ DEBUG [845a64f3] Command: [ -L /var/www/planetbowling/preprod/releases/20190319094951/media ]
+ DEBUG [c73cef9c] Finished in 0.122 seconds with exit status 1 (failed).
+ DEBUG [e3e214ab] Running [ -d /var/www/planetbowling/preprod/releases/20190319094951/media ] on 79.137.41.200
+ DEBUG [e3e214ab] Command: [ -d /var/www/planetbowling/preprod/releases/20190319094951/media ]
+ DEBUG [c472783b] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [b35487f0] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190319094951/media on 79.137.41.200
+ DEBUG [b35487f0] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190319094951/media
+  INFO [4c9802c8] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [63384384] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190319094951/media on 79.137.41.200
+ DEBUG [63384384] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/media /var/www/planetbowling/preprod/releases/20190319094951/media
+  INFO [76971079] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [d62ae9fc] Running [ -L /var/www/planetbowling/preprod/releases/20190319094951/var ] on 79.137.41.200
+ DEBUG [d62ae9fc] Command: [ -L /var/www/planetbowling/preprod/releases/20190319094951/var ]
+ DEBUG [9325c509] Finished in 0.129 seconds with exit status 1 (failed).
+ DEBUG [cc1eb477] Running [ -d /var/www/planetbowling/preprod/releases/20190319094951/var ] on 79.137.41.200
+ DEBUG [cc1eb477] Command: [ -d /var/www/planetbowling/preprod/releases/20190319094951/var ]
+ DEBUG [5dcec684] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [f07c56c7] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190319094951/var on 79.137.41.200
+ DEBUG [f07c56c7] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190319094951/var
+  INFO [d2c83fe1] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [712f8ca1] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190319094951/var on 79.137.41.200
+ DEBUG [712f8ca1] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/var /var/www/planetbowling/preprod/releases/20190319094951/var
+  INFO [37f3fe54] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [df9e96bb] Running [ -L /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [df9e96bb] Command: [ -L /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules ]
+ DEBUG [f0debf47] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [4a40e913] Running [ -d /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules ] on 79.137.41.200
+ DEBUG [4a40e913] Command: [ -d /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules ]
+ DEBUG [8926ba75] Finished in 0.123 seconds with exit status 1 (failed).
+  INFO [beb6a2aa] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules on 79.137.41.200
+ DEBUG [beb6a2aa] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/shared/api/websocket/sdasyncws/node_modules /var/www/planetbowling/preprod/releases/20190319094951/api/websocket/sdasyncws/node_modules
+  INFO [be1505f8] Finished in 0.122 seconds with exit status 0 (successful).
+  INFO [60b1e516] Running /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190319094951 /var/www/planetbowling/preprod/releases/current on 79.137.41.200
+ DEBUG [60b1e516] Command: /usr/bin/env ln -s /var/www/planetbowling/preprod/releases/20190319094951 /var/www/planetbowling/preprod/releases/current
+  INFO [925274f4] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [d33b3da9] Running /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod on 79.137.41.200
+ DEBUG [d33b3da9] Command: /usr/bin/env mv /var/www/planetbowling/preprod/releases/current /var/www/planetbowling/preprod
+  INFO [60ced105] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [753962ec] Running /usr/bin/env ls -x /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [753962ec] Command: /usr/bin/env ls -x /var/www/planetbowling/preprod/releases
+ DEBUG [0a6d762c] 	20190212124410	20190311144623	20190315180425	20190319094951
+ DEBUG [0a6d762c] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO Keeping 3 of 4 deployed releases on 79.137.41.200
+ DEBUG [229a8057] Running [ -d /var/www/planetbowling/preprod/current ] on 79.137.41.200
+ DEBUG [229a8057] Command: [ -d /var/www/planetbowling/preprod/current ]
+ DEBUG [cb746ac8] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [5f780b60] Running /usr/bin/env readlink /var/www/planetbowling/preprod/current on 79.137.41.200
+ DEBUG [5f780b60] Command: /usr/bin/env readlink /var/www/planetbowling/preprod/current
+ DEBUG [b9275446] 	/var/www/planetbowling/preprod/releases/20190319094951
+ DEBUG [b9275446] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [719e6298] Running /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190212124410 on 79.137.41.200
+ DEBUG [719e6298] Command: /usr/bin/env rm -rf /var/www/planetbowling/preprod/releases/20190212124410
+  INFO [dfb168e8] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [2643dc6a] Running if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [2643dc6a] Command: if test ! -d /var/www/planetbowling/preprod/releases; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases'" 1>&2; false; fi
+ DEBUG [df1d11c6] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [b47cc736] Running /usr/bin/env echo "Branch preprod (at 53a5e19e06d01ad250940424335226f114b1ac8a) deployed as release 20190319094951 by amir" >> /var/www/planetbowling/preprod/revisions.log on 79.137.41.200
+ DEBUG [b47cc736] Command: cd /var/www/planetbowling/preprod/releases && /usr/bin/env echo "Branch preprod (at 53a5e19e06d01ad250940424335226f114b1ac8a) deployed as release 20190319094951 by amir" >> /var/www/planetbowling/preprod/revisions.log
+  INFO [c88ef493] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [79f1c46a] Running if test ! -d /var/www/planetbowling/preprod/releases/20190319094951; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190319094951'" 1>&2; false; fi on 79.137.41.200
+ DEBUG [79f1c46a] Command: if test ! -d /var/www/planetbowling/preprod/releases/20190319094951; then echo "Directory does not exist '/var/www/planetbowling/preprod/releases/20190319094951'" 1>&2; false; fi
+ DEBUG [e19beccc] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [39a32d84] Running /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases on 79.137.41.200
+ DEBUG [39a32d84] Command: cd /var/www/planetbowling/preprod/releases/20190319094951 && /usr/bin/env ls -xt /var/www/planetbowling/preprod/releases
+ DEBUG [07196d9a] 	20190319094951	20190315180425	20190311144623
+ DEBUG [07196d9a] Finished in 0.126 seconds with exit status 0 (successful).
+ DEBUG [6b1235f8] Running /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190315180425/REVISION on 79.137.41.200
+ DEBUG [6b1235f8] Command: cd /var/www/planetbowling/preprod/releases/20190319094951 && /usr/bin/env cat /var/www/planetbowling/preprod/releases/20190315180425/REVISION
+ DEBUG [87f989b6] 	5ae42deca803484e75cb973d9807b03704b5e8eb
+ DEBUG [87f989b6] Finished in 0.127 seconds with exit status 0 (successful).
+ DEBUG [7951b769] Running /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 5ae42deca803484e75cb973d9807b03704b5e8eb..53a5e19e06d01ad250940424335226f114b1ac8a on 79.137.41.200
+ DEBUG [7951b769] Command: cd /var/www/planetbowling/preprod/releases/20190319094951 && /usr/bin/env git --git-dir=/var/www/planetbowling/preprod/repo --no-pager log --pretty=format:'%s (%an)' --encoding=UTF-8 --date=short --reverse 5ae42deca803484e75cb973d9807b03704b5e8eb..53a5e19e06d01ad250940424335226f114b1ac8a
+ DEBUG [ec456681] 	Ticket CE Module V2.1.2 (Add checked icon on validate button) (Amir Boudjadi)
+Merge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)
+Ticket CE Module V2.1.3 (+ La gestion des anniversaires) (Amir Boudjadi)
+Ticket CE Module V2.1.4 (gérer les parties gratuites des invités) (Amir Boudjadi)
+Ticket CE Module V2.1.5 (gestion des parties gratuites des invités Suite) (Amir Boudjadi)
+Merge pull request #58 from Weblibre-consulting/integration (Prince)
+ DEBUG [ec456681] Finished in 0.130 seconds with exit status 0 (successful).
+  INFO Notifying Slack of deploy finished
+  INFO [12f39ed6] Running /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Ticket CE Module V2.1.2 (Add checked icon on validate button) (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nTicket CE Module V2.1.3 (+ La gestion des anniversaires) (Amir Boudjadi)\nTicket CE Module V2.1.4 (gérer les parties gratuites des invités) (Amir Boudjadi)\nTicket CE Module V2.1.5 (gestion des parties gratuites des invités Suite) (Amir Boudjadi)\nMerge pull request #58 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Ticket CE Module V2.1.2 (Add checked icon on validate button) (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nTicket CE Module V2.1.3 (+ La gestion des anniversaires) (Amir Boudjadi)\nTicket CE Module V2.1.4 (gérer les parties gratuites des invités) (Amir Boudjadi)\nTicket CE Module V2.1.5 (gestion des parties gratuites des invités Suite) (Amir Boudjadi)\nMerge pull request #58 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"53a5e19e06d01ad250940424335226f114b1ac8a","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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 as amir@localhost
+ DEBUG [12f39ed6] Command: /usr/bin/env curl -X POST -s --data-urlencode 'payload={"channel":"#general","username":"Capistrano","icon_emoji":":ghost:","parse":"full","attachments":[{"fallback":"Changelog : Ticket CE Module V2.1.2 (Add checked icon on validate button) (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nTicket CE Module V2.1.3 (+ La gestion des anniversaires) (Amir Boudjadi)\nTicket CE Module V2.1.4 (gérer les parties gratuites des invités) (Amir Boudjadi)\nTicket CE Module V2.1.5 (gestion des parties gratuites des invités Suite) (Amir Boudjadi)\nMerge pull request #58 from Weblibre-consulting/integration (Prince)","color":"good","text":"Changelog : Ticket CE Module V2.1.2 (Add checked icon on validate button) (Amir Boudjadi)\nMerge remote-tracking branch 'origin/integration' into integration (Amir Boudjadi)\nTicket CE Module V2.1.3 (+ La gestion des anniversaires) (Amir Boudjadi)\nTicket CE Module V2.1.4 (gérer les parties gratuites des invités) (Amir Boudjadi)\nTicket CE Module V2.1.5 (gestion des parties gratuites des invités Suite) (Amir Boudjadi)\nMerge pull request #58 from Weblibre-consulting/integration (Prince)","fields":[{"title":"Status","value":"success","short":true},{"title":"Stage","value":"preprod","short":true},{"title":"Branch","value":"preprod","short":true},{"title":"Revision","value":"53a5e19e06d01ad250940424335226f114b1ac8a","short":true},{"title":"Hosts","value":"79.137.41.200","short":true}],"mrkdwn_in":[]}]}' https://hooks.slack.com/services/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
+ DEBUG [1cf7ef8e] 	ok
+  INFO [1cf7ef8e] Finished in 0.285 seconds with exit status 0 (successful).

@@ -1,0 +1,121 @@
+version: '2'
+services:
+
+    ###############
+    # Application #
+    ###############
+
+    # Project container
+    application:
+        build:
+            context: ./docker/containers/application
+            args:
+                APP_PROJECT_DIR_NAME: ${APP_PROJECT_DIR_NAME}
+        volumes:
+          - "nfsmount:/var/www/project/magento"
+        tty: true
+
+    #############
+    # Databases #
+    #############
+
+    # Mysql
+    db:
+        image: mysql:5.7
+        volumes:
+            - ./docker/datas/mysql/:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASS}
+
+    #######
+    # PHP #
+    #######
+
+    # Php 7
+    php:
+        build:
+            context: ./docker/containers/php7-fpm
+            args:
+                APP_PROJECT_DIR_NAME: ${APP_PROJECT_DIR_NAME}
+                HOST_USER_ID: ${HOST_USER_ID}
+        ports:
+            - "9000:9000"
+        volumes_from:
+            - application
+        links:
+            - db:db-host
+        depends_on:
+            - mailhog
+        env_file: .env
+
+    ###########
+    # Servers #
+    ###########
+
+    # Nginx
+    nginx:
+        build:
+            context: ./docker/containers/nginx
+            args:
+               APP_PROJECT_TYPE: ${APP_PROJECT_TYPE}
+        environment:
+            APP_SERVER_NAME: ${APP_SERVER_NAME}
+            APP_PROJECT_DIR_NAME: ${APP_PROJECT_DIR_NAME}
+            MAGE_IS_DEVELOPER_MODE: ${MAGE_IS_DEVELOPER_MODE}
+        ports:
+            - "8080:80"
+            - "443:443"
+        links:
+            - php:php-host
+        volumes_from:
+            - application
+
+    ###############
+    # Cache/Proxy #
+    ###############
+
+    # Varnish 4.x on centos7 #non official container
+    varnish:
+        build:
+            context: ./docker/containers/varnish
+        ports:
+            - "80:80"
+        links:
+            - nginx:nginx-host
+
+    #################
+    # NOSQL STORAGE #
+    #################
+
+    # Redis 3.2.4 on debian jessie //official redis image
+    redis:
+        image: redis:3.2
+        ports:
+            - "6379:6379"
+
+    ###############
+    #    email    #
+    ###############
+
+    # mailhog
+    mailhog:
+        image: mailhog/mailhog
+        ports:
+            - "1025:1025"
+            - "8025:8025"
+
+
+
+volumes:
+    nfsmount:
+        driver: local
+        driver_opts:
+            type: nfs
+            o: addr=host.docker.internal,rw,nolock,hard,nointr,nfsvers=3
+            device: ":$PWD/magento"
+

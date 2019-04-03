@@ -1,0 +1,5 @@
+source 'http://rubygems.org'
+
+gem 'capistrano', '~> 3.0', require: false, group: :development
+gem 'magentify'
+gem 'capistrano-slackify', require: false
