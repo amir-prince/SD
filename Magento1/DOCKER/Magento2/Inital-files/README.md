@@ -1,4 +1,4 @@
-# Dyneff - Magento 2
+# projectname - Magento 2
 
 #### Nginx 1.10 + PHP-FPM 7.1 + OPCache + MySql + Varnish + N98 Magerun 2 + XDebug + Redis
 
