@@ -1,0 +1,15 @@
+<?php
+/**
+ * @object Update customer attribute to multiselect
+ * @attribute code : sd_mode_reglement
+ * @id  : 221
+ * @autor @mir
+ */
+$installer = $this;
+$installer->startSetup();
+
+$sdModeReglementId = 221;
+$installer->updateAttribute('customer', $sdModeReglementId, 'source_model', "wlc_customer/eav_entity_attribute_source_customeroptionsreglement");
+$installer->updateAttribute('customer', $sdModeReglementId, 'frontend_input', "multiselect");
+
+$installer->endSetup();
