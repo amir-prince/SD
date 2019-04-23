@@ -1,0 +1,52 @@
+1. Pour Autoriser certaine IP : 
+index.php 
+
+$ip = $_SERVER['REMOTE_ADDR'];
+$allowed = array(
+    'blop'=>'91.213.82.241',
+    'Foo bel air'=>'65.39.85.67'
+);
+
+if (file_exists($maintenanceFile) && !in_array($ip, $allowed)) {
+    include_once dirname(__FILE__) . '/errors/503.php';
+    exit;
+}
+
+2. créer maintenance.flag à la racine
+3. /errors/default/503.phtml :
+
+<!doctype html>
+<title>site/maintenance</title>
+<style>
+  body { text-align: center;
+  		 padding: 150px;
+  		 background: url("https:/baseurl/errors/default/images/sushi-bg.jpg");
+  		 background-size: cover;
+  		 -webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		}
+  h1 { font-size: 34px; color: #393939;}
+  body { font: 20px Helvetica, sans-serif; color: #333; }
+  article { display: block; text-align: center; width: 650px; margin: 0 auto; background-color: rgba(255, 255, 255, 0.6); padding: 10px;}
+  a { color: #dc8100; text-decoration: none; }
+  a:hover { color: #333; text-decoration: none; }
+</style>
+ 
+<article>
+	<img src="https://baseurl/errors/default/images/logo.png" alt="" />
+    <h1>Votre site est momentanément indisponible !</h1>
+    <div>
+        <p>Vous pouvez toujours passer votre commande en appelant le : 04 00 00 00 01</p>
+        <p>Merci de votre compréhension.</p>
+        <p>&mdash; site.fr</p>
+    </div>
+</article>
+
+4. /errors/default/page.phtml : 
+
+tout affacer et mettre : 
+
+<?php require_once $contentTemplate; ?>
+
+
